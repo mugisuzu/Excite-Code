@@ -1,0 +1,16 @@
+{
+  "extends": ["stylelint-config-standard-scss", "stylelint-config-recess-order"],
+  "plugins": ["stylelint-declaration-block-no-ignored-properties"],
+  "ignoreFiles": ["**/node_modules/**"],
+  "rules": {
+    "selector-pseudo-element-colon-notation": "double",
+    "string-quotes": "single",
+    "selector-class-pattern": null,
+    "scss/dollar-variable-pattern": "^[a-zA-Z][a-zA-Z0-9]*$",
+    "scss/at-mixin-pattern": "^[a-zA-Z][a-zA-Z0-9]*$",
+    "keyframes-name-pattern": null,
+    "plugin/declaration-block-no-ignored-properties": true,
+    "no-descending-specificity": null
+
+  }
+}

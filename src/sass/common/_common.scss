@@ -1,0 +1,11 @@
+@use '../base/init' as *;
+
+// *----------------------------------------
+// common
+// ----------------------------------------*/
+
+.inner {
+  width: min(100vw - 20px, 1140px);
+  padding-block: 120px;
+  margin-inline: auto;
+}

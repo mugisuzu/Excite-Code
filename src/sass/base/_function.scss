@@ -1,0 +1,16 @@
+@use 'sass:math';
+
+// *----------------------------------------
+// 関数
+// ----------------------------------------*
+
+
+// pxをremに変換
+@function rem($px) {
+  @return math.div($px, 16) * 1rem;
+}
+
+// line-height関数
+@function lh($size, $line-height) {
+  @return math.div($line-height, $size);
+}

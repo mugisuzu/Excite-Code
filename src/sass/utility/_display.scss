@@ -1,0 +1,21 @@
+@use '../base/init' as *;
+
+// *----------------------------------------
+// ヘルパークラス
+// ----------------------------------------*
+
+.u-spOnly {
+  display: none;
+
+  @include max(md) {
+    display: block;
+  }
+}
+
+.u-pcOnly {
+  display: block;
+
+  @include max(md) {
+    display: none;
+  }
+}

@@ -1,0 +1,72 @@
+@use '../base/init' as *;
+
+// *----------------------------------------
+// hamburger
+// ----------------------------------------*/
+
+// .Hamburger {
+//   --opacity: 1;
+//   --rotate: 0;
+//   --translate: -8px;
+
+//   position: absolute;
+//   top: 50%;
+//   right: 30px;
+//   z-index: 9000;
+//   display: none;
+//   flex-direction: column;
+//   place-items: center;
+//   width: 25px;
+//   aspect-ratio: 25 /14;
+//   transform: translateY(-50%);
+
+//   &.is-active {
+//     --opacity: 0;
+//     --rotate: 135deg;
+//     --translate: 0;
+
+//     width: 28.7px;
+//     aspect-ratio: 1 /1;
+
+//     span {
+//       background-color: $cHamburgerLine;
+
+//       &:nth-child(2) {
+//         width: 100%;
+//       }
+//     }
+//   }
+
+//   @include max(lg) {
+//     display: grid;
+//   }
+
+//   span {
+//     display: block;
+//     grid-area: 1 / 1 / -1 / -1;
+//     justify-self: flex-start;
+//     width: 100%;
+//     height: 1px;
+//     background-color: $cHamburgerShowLine;
+//     transition: background-color 0.8s, opacity 0.4s, rotate 0.4s, transform 0.4s;
+
+//     &:nth-child(1) {
+//       opacity: var(--opacity);
+//     }
+
+//     &:nth-child(2) {
+//       width: 15px;
+//       rotate: var(--rotate);
+//       translate: 0 calc(var(--translate) * -1);
+//     }
+
+//     &:nth-child(3) {
+//       rotate: calc(var(--rotate) * -1);
+//       translate: 0 var(--translate);
+//     }
+//   }
+
+//   &__name {
+//     font-size: 13px;
+//   }
+// }

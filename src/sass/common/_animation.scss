@@ -1,0 +1,105 @@
+@use '../base/init' as *;
+
+// *----------------------------------------
+// Animation
+// ----------------------------------------*
+
+// * スクロールアニメーション
+// ----------------------------------------*
+
+[class^='fade'] {
+  opacity: 0;
+}
+
+.fadeIn {
+  opacity: 0;
+
+  @include animation($name: fadeInAnime, $duration: 2s);
+}
+
+
+@keyframes fadeInAnime {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeUp {
+  opacity: 0;
+
+  @include animation($name: fadeUpAnime, $duration: 2s);
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeLeft {
+  opacity: 0;
+
+  @include animation($name: fadeLeftAnime, $duration: 2s);
+}
+
+@keyframes fadeLeftAnime {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fadeRight {
+  opacity: 0;
+
+  @include animation($name: fadeRightAnime, $duration: 2s);
+}
+
+@keyframes fadeRightAnime {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fadeDown {
+  opacity: 0;
+
+  @include animation($name: fadeDownAnime, $duration: 2s);
+}
+
+@keyframes fadeDownAnime {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animeDelay {
+  animation-delay: 1s;
+}

@@ -1,0 +1,136 @@
+@use '../base/init' as *;
+
+// *----------------------------------------
+// header
+// ----------------------------------------*/
+
+// .Header {
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   z-index: 9999;
+//   width: 100%;
+//   height: 80px;
+//   background-color: $cWhite;
+
+//   @include max(md) {
+//     background-color: transparent;
+//   }
+// }
+
+// .Header__Inner {
+//   display: flex;
+//   justify-content: space-between;
+//   height: inherit;
+// }
+
+// .Header__Logo {
+//   position: absolute;
+//   left: 0;
+// }
+
+// .Header__Nav {
+//   position: absolute;
+//   right: 0;
+//   left: 0;
+//   display: flex;
+//   justify-content: flex-end;
+//   width: 100%;
+//   height: 100%;
+
+//   @include max(lg) {
+//     visibility: hidden;
+//   }
+// }
+
+// .Header__List {
+//   display: flex;
+//   gap: 50px;
+//   align-items: center;
+// }
+
+// .Header__Item {
+//   text-transform: uppercase;
+
+//   &:last-child {
+//     margin-right: 50px;
+//   }
+// }
+
+// .Header__NavLink {
+//   font-size: 16px;
+//   font-weight: $Medium;
+// }
+
+// // .fa-envelope {
+// //   position: absolute;
+// //   top: 50%;
+// // }
+
+// // *----------------------------------------
+// // SpMenu
+// // ----------------------------------------*/
+
+// .SpMenu {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   z-index: 100;
+//   width: 100%;
+//   height: 100%;
+//   color: $cWhite;
+//   visibility: visible;
+
+//   // background-color: $cMidnight;
+//   transition: 0.3s ease;
+
+//   // transform: translateY(0%);
+// }
+
+// //   &.show {
+// //     transform: translateY(-100%);
+// //   }
+// // }
+
+// .SpMenu__Inner {
+//   z-index: 1;
+//   display: grid;
+//   width: 100%;
+//   overflow-y: scroll;
+//   overscroll-behavior-y: contain;
+// }
+
+// .SpMenu__Logo {
+//   a {
+//     display: inline-block;
+//   }
+// }
+
+// // .Logo {
+// // }
+
+// .SpMenu__Nav {
+//   padding-inline: 50px;
+//   margin-top: 80px;
+// }
+
+// // .SpMenu__List {
+// // }
+
+// .SpMenu__Item {
+//   padding-block: 12px;
+//   border-top: 1px solid $cPrimary;
+
+//   &:last-child {
+//     border-bottom: 1px solid $cPrimary;
+//   }
+// }
+
+// .SpMenu__Link {
+//   font-size: 14px;
+//   text-transform: uppercase;
+// }
+
+// .SpMenu__Sns {
+//   margin-top: 50px;
+// }

@@ -1,0 +1,88 @@
+@use '../base/init' as *;
+
+// *----------------------------------------
+// pagination
+// ----------------------------------------*/
+
+// .PaginationWrapper {
+//   margin-top: 56px;
+
+//   @include max(md) {
+//     margin-top: 40px;
+//   }
+// }
+
+// // ページネーションの要素を横並びにする
+// .pagination {
+//   display: flex;
+//   padding-left: 61px;
+//   overflow-x: auto;
+
+//   @include max(md) {
+//     justify-content: center;
+//     padding-left: 0;
+//   }
+// }
+
+// // それぞれのページ番号のスタイル
+// .page-numbers {
+//   display: flex;
+//   gap: 10px;
+//   align-items: center;
+//   margin-right: auto;
+//   margin-left: auto;
+
+//   a,
+//   span {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     width: 40px;
+//     aspect-ratio: 1 / 1;
+//     font-family: $SecondFont;
+//     font-size: 14px;
+//     font-weight: $Medium;
+//     color: $cMineShaft;
+//     background-color: $cPaginationBg;
+
+//     @include max(md) {
+//       font-size: 12px;
+//     }
+//   }
+
+//   // 現在のページ番号のCSS
+//   .current {
+//     color: $cWhite;
+//     pointer-events: none;
+//     background-color: $cSecondary;
+//   }
+
+//   .dots {
+//     pointer-events: none;
+//   }
+
+//   // 前へ
+//   .prev {
+//     justify-content: flex-end;
+//     padding-right: 10px;
+//     background-color: $cWhite;
+//   }
+
+//   // 次へ
+//   .next {
+//     justify-content: flex-start;
+//     padding-left: 10px;
+//     background-color: $cWhite;
+//   }
+
+//   // a:focus,
+//   // a:hover {
+//   // }
+// }
+
+// // 前へ、次へリンクのスタイル
+// .Pagination__Arrow {
+//   display: inline-block;
+//   width: 11px;
+//   height: 18px;
+// }

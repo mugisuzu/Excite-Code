@@ -1,0 +1,101 @@
+@use 'sass:map';
+
+// *----------------------------------------
+// mixin
+// ----------------------------------------*
+
+
+// * メディアクエリ
+// ----------------------------------------*
+
+// ブレイクポイントの種類を定義
+$breakpoints: (
+  xs: 356px,
+  sm: 576px,
+  md: 769px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1440px,
+  exl: 1920px,
+) !default;
+
+// メディアクエリを呼び出す記載
+@mixin min($breakpoint) {
+  @media (width >= #{map-get($breakpoints,$breakpoint)}) {
+    @content;
+  }
+}
+
+@mixin max($breakpoint) {
+  @media (width < #{map-get($breakpoints,$breakpoint)}) {
+    @content;
+  }
+}
+
+// * アニメーション
+// ----------------------------------------*
+@mixin animation($name, $duration: 1s, $timing-function: ease, $delay: 0s, $iteration-count: 1, $direction: normal, $fill-mode: forwards) {
+  animation: {
+    name: $name;
+    duration: $duration;
+    timing-function: $timing-function;
+    delay: $delay;
+    iteration-count: $iteration-count;
+    direction: $direction;
+    fill-mode: $fill-mode;
+  }
+}
+
+// * ハーフ・レディング
+// ----------------------------------------*
+@mixin lineHeight($line-height) {
+  &::before,
+  &::after {
+    display: block;
+    width: 0;
+    height: 0;
+    content: '';
+  }
+
+  &::before {
+    margin-top: calc((1 - #{$line-height}) * 0.5em);
+  }
+
+  &::after {
+    margin-bottom: calc((1 - #{$line-height}) * 0.5em);
+  }
+}
+
+// * hoverなど
+// ----------------------------------------*
+// マウスのときだけhoverスタイルを当てる
+@mixin hover {
+  @media (hover: hover) {
+    &:where(:any-link, :enabled, summary):hover {
+      @content;
+    }
+  }
+}
+
+// 使用例
+// .button {
+//   @include hover {
+//     background-color: red;
+//   }
+// }
+
+// クリック可能な親要素がhoverされたときのスタイル
+@mixin groupHover {
+  @media (hover: hover) {
+    &:is(:where(:any-link, :enabled, summary):hover *) {
+      @content;
+    }
+  }
+}
+
+// 使用例
+// .image {
+//   @include groupHover {
+//     transform: scale(1.1);
+//   }
+// }
