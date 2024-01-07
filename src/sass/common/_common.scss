@@ -4,16 +4,26 @@
 // common
 // ----------------------------------------*/
 
+// * inner
+// ----------------------------------------*
+
 .inner {
   width: min(100vw - 20px, 1140px);
   padding-block: 120px;
   margin-inline: auto;
 }
 
+// * logo
+// ----------------------------------------*
+
+// .logo {
+
+// }
+
 .gnav {
   display: flex;
   align-items: center;
-  
+
   // position: absolute;
   // right: 0;
   // left: 0;
@@ -42,5 +52,5 @@
 
 .Header__NavLink {
   font-size: 16px;
-  font-weight: $Medium;
+  font-weight: $medium;
 }

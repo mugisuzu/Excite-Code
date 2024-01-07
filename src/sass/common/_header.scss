@@ -13,7 +13,7 @@
   height: 80px;
   background-color: $cWhite;
 
-  @include max(md) {
+  @include max(lg) {
     background-color: transparent;
   }
 }
@@ -29,10 +29,19 @@
   left: 0;
 }
 
+.header__logo .logo__link img {
+  width: 258px;
+
+  @include max(lg) {
+    width: 114px;
+    height: 80px;
+  }
+}
+
 .header__nav {
   font-family: $thirdFont;
   font-size: 16px;
-  font-weight: $Medium;
+  font-weight: $medium;
   line-height: lh(16, 19);
   text-transform: uppercase;
 
@@ -55,7 +64,6 @@
   column-gap: 10px;
   color: $cWhite;
 }
-
 
 // * spMenu
 // ----------------------------------------*
