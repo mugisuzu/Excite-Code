@@ -1,0 +1,424 @@
+@use '../base/init' as *;
+
+// *----------------------------------------
+// top
+// ----------------------------------------*/
+
+// * firstView
+// ----------------------------------------*
+
+.firstView {
+  width: 100%;
+  height: 100vh;
+  padding-inline: 80px;
+
+  @include max(lg) {
+    padding-inline: 10px;
+  }
+}
+
+.firstView__inner {
+  position: relative;
+  width: 100%;
+  height: inherit;
+}
+
+.firstView__images {
+  width: calc(100% - 246px);
+
+  @include max(lg) {
+    width: 100%;
+  }
+
+  img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+}
+
+.firstView__title {
+  position: absolute;
+  top: 180px;
+  right: 0;
+  display: inline-flex;
+  flex-direction: row-reverse;
+  column-gap: 25px;
+
+  @include max(lg) {
+    position: static;
+    flex-direction: column;
+    column-gap: 0;
+    margin-top: 20px;
+  }
+}
+
+.firstView__text {
+  font-size: 60px;
+  font-weight: $bold;
+  line-height: lh(60, 63.6);
+  writing-mode: vertical-rl;
+
+  @include max(lg) {
+    padding-inline: 20px;
+    font-size: 34px;
+    line-height: lh(34, 49);
+    writing-mode: initial;
+  }
+}
+
+// * textAnime
+// ----------------------------------------*
+
+.textAnime {
+  p {
+    width: 100%;
+    margin-top: 60px;
+    font-size: 150px;
+    font-weight: $bold;
+    line-height: lh(150,217);
+    color: $cPrimary;
+    white-space: nowrap;
+    transform: translateX(100%);
+
+    @include animation($name: textAnime, $duration: 20s, $timing-function: linear, $iteration-count: infinite);
+
+    @include max(lg) {
+      margin-top: 138px;
+      font-size: 84px;
+    }
+  }
+}
+
+@keyframes textAnime {
+  100% {
+    transform: translateX(-150%);
+  }
+}
+
+// // *----------------------------------------
+// // About us
+// // ----------------------------------------*/
+
+// .About {
+// }
+
+// .About__Inner {
+//   display: flex;
+//   gap: 60px;
+//   padding-block: 0;
+//   margin-top: 60px;
+
+//   @include max(md) {
+//     flex-direction: column;
+//     gap: 30px;
+//     margin-top: 20px;
+//   }
+// }
+
+// .Inner {
+// }
+
+// .About__Media {
+//   flex-shrink: 0;
+//   width: 48.2456140351%;
+
+//   @include max(md) {
+//     width: 100%;
+//   }
+
+//   img {
+//     // height: 100%;
+//     // object-fit: cover;
+//   }
+// }
+
+// .About__TextArea {
+//   display: flex;
+//   flex-direction: column;
+
+//   // width: 42.9824561404%;
+//   // max-width: 490px;
+//   padding-top: 70px;
+//   color: $cBlack;
+
+//   // padding-bottom: 7.152777777777778vw;
+//   @include max(lg) {
+//     padding-top: 8px;
+//   }
+// }
+
+// .About__Title {
+//   font-family: $SecondFont;
+//   font-size: 14px;
+//   font-weight: $Bold;
+// }
+
+// .About__Summary {
+// }
+
+// .About__Text {
+//   margin-top: 40px;
+//   font-family: 'Noto Sans JP';
+//   font-size: 16px;
+//   font-style: normal;
+//   font-weight: $Regular;
+//   line-height: 2.375;
+
+//   @include max(md) {
+//     margin-top: 30px;
+//     font-size: 14px;
+//     line-height: 2.28;
+//   }
+// }
+
+// .About__More {
+//   justify-content: flex-end;
+//   margin-top: 40px;
+// }
+
+// .About__MoreLink {
+// }
+
+// // *----------------------------------------
+// // Service
+// // ----------------------------------------*/
+
+// // .Service__Inner {
+// //   padding-top: 120px;
+// // }
+
+// .Inner {
+// }
+
+// .Service__Title {
+//   text-align: right;
+// }
+
+// .Service__List {
+//   display: grid;
+//   grid-template-columns: repeat(auto-fit, minmax(335px, 1fr));
+//   gap: 50px 18px;
+//   margin-top: 40px;
+
+//   @include max(md) {
+//     grid-template-columns: 1fr;
+//     column-gap: 0;
+//     margin-top: 20px;
+//   }
+// }
+
+// .Service__Item {
+// }
+
+// .Service__ItemFoot {
+//   display: flex;
+//   flex-direction: column;
+//   padding-top: 20px;
+//   padding-right: 20px;
+
+//   @include max(md) {
+//     padding-right: 0;
+//   }
+// }
+
+// .Service__Thumb {
+//   // height: 170px;
+// }
+
+// .Service__Text {
+//   display: -webkit-box;
+//   min-height: 114px;
+//   overflow: hidden;
+//   font-family: 'Noto Sans JP';
+//   font-size: 16px;
+//   font-style: normal;
+//   font-weight: $Regular;
+//   line-height: 2.375;
+//   color: $cBlack;
+//   -webkit-box-orient: vertical;
+//   -webkit-line-clamp: 3;
+
+//   @include max(md) {
+//     min-height: 64px;
+//     font-size: 14px;
+//     line-height: 2.28;
+//   }
+// }
+
+// .Service__More {
+//   justify-content: center;
+//   width: 141px;
+//   padding: 10px 0;
+//   margin-top: 20px;
+//   margin-left: auto;
+//   border: 1px solid $cPrimary;
+//   border-radius: 4px;
+// }
+
+// .Service__MoreLink {
+// }
+
+// // *----------------------------------------
+// // Works
+// // ----------------------------------------*/
+
+// .Works {
+//   background-color: $cSectionBg;
+// }
+
+// .Works__Inner {
+//   padding-bottom: 0;
+
+//   @include max(md) {
+//     padding-top: 60px;
+//   }
+// }
+
+// .Inner {
+// }
+
+// .Works__Title {
+// }
+
+// .Works__Contents {
+//   padding: 50px 40px;
+//   margin-top: 40px;
+//   text-align: right;
+//   background-color: #fff;
+
+//   @include max(md) {
+//     padding: 30px 40px 80px;
+//     margin-inline: -20px;
+//     margin-top: 20px;
+//   }
+// }
+
+// .Works__List {
+//   text-align: left;
+// }
+
+// .Works__Item {
+//   display: flex;
+//   column-gap: 50px;
+//   padding-bottom: 50px;
+//   border-bottom: 1px solid $cGrayBorder;
+
+//   @include max(md) {
+//     padding-bottom: 30px;
+//   }
+
+//   &:not(:first-child) {
+//     padding-top: 50px;
+
+//     @include max(md) {
+//       padding-top: 30px;
+//     }
+//   }
+
+//   @include max(md) {
+//     column-gap: 18px;
+//   }
+// }
+
+// .Works__link {
+//   // display: flex;
+// }
+
+// .Works__Thumb {
+//   flex-shrink: 0;
+//   width: 29%;
+
+//   @include max(md) {
+//     width: 40.6779661017%;
+//   }
+// }
+
+// .Works__Body {
+//   display: flex;
+//   flex-direction: column;
+//   width: 100%;
+//   max-width: 680px;
+//   font-family: 'Noto Sans JP';
+// }
+
+// // .Works__Tags {
+// // }
+
+// .Works__BodyTitle {
+//   display: -webkit-box;
+//   margin-top: 30px;
+//   overflow: hidden;
+//   font-size: 24px;
+//   font-weight: $Medium;
+//   color: $cBlack;
+//   -webkit-box-orient: vertical;
+//   -webkit-line-clamp: 1;
+
+//   @include max(md) {
+//     margin-top: 12px;
+//     font-size: 14px;
+//     -webkit-line-clamp: 3;
+//   }
+// }
+
+// .Works__Text {
+//   display: -webkit-box;
+//   min-height: 76px;
+//   margin-top: 30px;
+//   overflow: hidden;
+//   font-size: 16px;
+//   font-weight: $Regular;
+//   line-height: 2.375;
+//   color: $cDetailText;
+//   -webkit-box-orient: vertical;
+//   -webkit-line-clamp: 2;
+
+//   @include max(md) {
+//     display: none;
+//   }
+// }
+
+// .Works__Time {
+//   margin-top: auto;
+
+//   @include max(md) {
+//     margin-top: 12px;
+//   }
+// }
+
+// .Works__More {
+//   margin-top: 40px;
+
+//   @include max(md) {
+//     margin-top: 41px;
+//   }
+// }
+
+// // *----------------------------------------
+// // TopNews
+// // ----------------------------------------*/
+
+// .TopNews {
+//   background-color: $cSectionBg;
+// }
+
+// .TopNews__Inner {
+//   @include max(md) {
+//     padding-top: 72px;
+//   }
+// }
+
+// .TopNews__Categories {
+//   margin-top: 45px;
+
+//   @include max(md) {
+//     margin-top: 40px;
+//   }
+// }
+
+// .TopNews__Main {
+//   @include max(md) {
+//     margin-top: 40px;
+//   }
+// }

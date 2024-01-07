@@ -25,7 +25,7 @@
       referrerpolicy="no-referrer"
     />
     <!-- fv -->
-    <link rel="preload" as="image" href="./public/assets/images/about/title_bg.jpg" />
+    <!-- <link rel="preload" as="image" href="./public/assets/images/about/title_bg.jpg" />
     <link rel="preload" as="image" href="./public/assets/images/service/title_bg.jpg" />
     <link rel="preload" as="image" href="./public/assets/images/work/title_bg.jpg" />
     <link rel="preload" as="image" href="./public/assets/images/news/title_bg.jpg" />
@@ -34,7 +34,7 @@
     <link rel="preload" as="image" href="./public/assets/images/service/title_bg_sp.jpg" />
     <link rel="preload" as="image" href="./public/assets/images/work/title_bg_sp.jpg" />
     <link rel="preload" as="image" href="./public/assets/images/news/title_bg_sp.jpg" />
-    <link rel="preload" as="image" href="./public/assets/images/contac/title_bg_sp.jpg" />
+    <link rel="preload" as="image" href="./public/assets/images/contac/title_bg_sp.jpg" /> -->
 
     <!-- Splide -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css" />
@@ -42,17 +42,15 @@
     <link rel="stylesheet" href="./public/assets/css/style.css" />
   </head>
 
-  <body id="PageTop">
-
+  <body id="top">
     <!-- header -->
     <header class="header">
       <div class="header__inner">
-
         <h1 class="header__logo logo">
-          <a href="#"><img src="./public/assets/images/header/header_logo.svg" width="258" height="180" decoding="async" alt="Excite Code" /></a>
+          <a class="logo__link" href="#"><img src="./public/assets/images/header/header_logo.svg" width="258" height="180" decoding="async" alt="Excite Code" /></a>
         </h1>
 
-        <button class="hamburger" id="js-hamburger" style="display: none;">
+        <button class="hamburger" id="js-hamburger" style="display: none">
           <span></span>
           <span></span>
           <span></span>
@@ -73,7 +71,7 @@
         <!-- /.header__nav -->
 
         <!-- hamburger -->
-        <div class="spMenu show" id="js-spMenu" style="display: none;">
+        <div class="spMenu show" id="js-spMenu" style="display: none">
           <div class="spMenu__inner">
             <div class="spMenu__logo logo">
               <a href="#"><img src="./public/assets/images/header/header_logo_sp_menu.svg" width="114" height="80" decoding="async" alt="Excite Code" /></a>
@@ -98,7 +96,6 @@
                   <a href="#"><i class="fa-brands fa-instagram"></i></a>
                 </li>
               </ul>
-              <!-- /.spMenu__sns -->
             </nav>
           </div>
         </div>
@@ -107,5 +104,60 @@
     </header>
     <!-- /.header -->
 
+    <!-- main -->
+    <main class="main">
+      <!-- firstView -->
+      <div class="firstView">
+        <div class="firstView__inner">
+          <div class="firstView__images">
+            <div class="firstView__splide splide" role="group" aria-label="Splideの基本的なHTML">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                    <picture>
+                      <source media="(max-width: 768px)" srcset="./public/assets/images/top/slider/fv_sp01.jpg" />
+                      <img src="./public/assets/images/top/slider/fv01.jpg" width="2200" height="1400" decoding="async" alt="女性達がドライブしている様子" />
+                    </picture>
+                  </li>
+                  <li class="splide__slide">
+                    <picture>
+                      <source media="(max-width: 768px)" srcset="./public/assets/images/top/slider/fv_sp02.jpg" />
+                      <img src="./public/assets/images/top/slider/fv02.jpg" width="2200" height="1400" decoding="async" alt="男性がドライブしている様子" />
+                    </picture>
+                  </li>
+                  <li class="splide__slide">
+                    <picture>
+                      <source media="(max-width: 768px)" srcset="./public/assets/images/top/slider/fv_sp03.jpg" />
+                      <img src="./public/assets/images/top/slider/fv03.jpg" width="2200" height="1400" decoding="async" alt="男女がドライブしている様子" />
+                    </picture>
+                  </li>
+                  <li class="splide__slide">
+                    <picture>
+                      <source media="(max-width: 768px)" srcset="./public/assets/images/top/slider/fv_sp04.jpg" />
+                      <img src="./public/assets/images/top/slider/fv04.jpg" width="2200" height="1400" decoding="async" alt="女性が車に腰掛けている様子" />
+                    </picture>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="firstView__title">
+            <p class="firstView__text">あなたの</p>
+            <p class="firstView__text">日常が目覚める</p>
+          </div>
+        </div>
+      </div>
+      <!-- /.firstView -->
+
+      <div class="textAnime">
+        <p>Good life for Good Car</p>
+      </div>
+
+      
+    </main>
+    <!-- /.main -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js" defer></script>
+    <script src="./public/assets/js/script.js" defer></script>
   </body>
 </html>
