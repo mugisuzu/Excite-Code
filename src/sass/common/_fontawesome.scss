@@ -3,3 +3,18 @@
 // *----------------------------------------
 // font awesome
 // ----------------------------------------*/
+
+// * メール、電話
+// ----------------------------------------*
+
+.fa-envelope,
+.fa-phone {
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  font-size: 22px;
+
+  @include max(md) {
+    font-size: 16px;
+  }
+}
