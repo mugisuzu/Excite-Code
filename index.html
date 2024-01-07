@@ -47,12 +47,12 @@
     <!-- header -->
     <header class="header">
       <div class="header__inner">
+
         <h1 class="header__logo logo">
           <a href="#"><img src="./public/assets/images/header/header_logo.svg" width="258" height="180" decoding="async" alt="Excite Code" /></a>
         </h1>
-        <!-- /.header__Logo Logo -->
 
-        <button class="hamburger" id="js-hamburger">
+        <button class="hamburger" id="js-hamburger" style="display: none;">
           <span></span>
           <span></span>
           <span></span>
@@ -66,15 +66,17 @@
             <li class="gnav__item"><a class="gnav__link" href="#">works</a></li>
             <li class="gnav__item"><a class="gnav__link" href="#">news</a></li>
           </ul>
-          <a class="gnav__btn btn" href="#"><i class="fa-regular fa-envelope"></i><span>contact</span></a>
+          <div class="gnav__btn">
+            <a class="gnav__btnLink btn" href="#"><i class="fa-regular fa-envelope"></i><span>contact</span></a>
+          </div>
         </nav>
         <!-- /.header__nav -->
 
         <!-- hamburger -->
-        <div class="spMenu show" id="js-spMenu">
+        <div class="spMenu show" id="js-spMenu" style="display: none;">
           <div class="spMenu__inner">
             <div class="spMenu__logo logo">
-              <a href="#"><img src="./public/assets/images/header/header_logo_spmenu.svg" width="114" height="80" decoding="async" alt="Excite Code" /></a>
+              <a href="#"><img src="./public/assets/images/header/header_logo_sp_menu.svg" width="114" height="80" decoding="async" alt="Excite Code" /></a>
             </div>
 
             <nav class="spMenu__nav">
