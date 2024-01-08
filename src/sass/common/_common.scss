@@ -12,6 +12,10 @@
   padding-block: 120px;
   padding-inline: 20px;
   margin-inline: auto;
+
+  @include max(md) {
+      padding-bottom: 80px;
+    }
 }
 
 .text {
@@ -20,8 +24,35 @@
   line-height: lh(16, 38);
 
   @include max(md) {
+    font-size: 14px;
     line-height: lh(14, 32);
   }
+}
+
+// * heading
+// ----------------------------------------*
+
+.heading {
+  font-family: $secondFont;
+  font-weight: $bold;
+  text-transform: capitalize;
+}
+
+.heading--primary {
+  margin-bottom: 40px;
+  font-size: 70px;
+  line-height: lh(70, 104);
+
+  @include max(md) {
+    margin-bottom: 20px;
+    font-size: 38px;
+    line-height: lh(38, 56);
+  }
+}
+
+.heading--secondary {
+  font-size: 100px;
+  line-height: lh(100, 148);
 }
 
 // * logo

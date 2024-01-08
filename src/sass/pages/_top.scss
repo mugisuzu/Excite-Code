@@ -101,6 +101,7 @@
 
 .about .section__inner {
   padding-top: 60px;
+  padding-bottom: 0;
 
   @include max(md) {
     padding-top: 20px;
@@ -171,84 +172,57 @@
   }
 }
 
-// // *----------------------------------------
-// // Service
-// // ----------------------------------------*/
+// * service
+// ----------------------------------------*
 
-// // .Service__Inner {
-// //   padding-top: 120px;
-// // }
+.service .section__inner {
+  width: min(100%, 1141px);
+}
 
-// .Inner {
-// }
+.service .heading {
+  text-align: right;
 
-// .Service__Title {
-//   text-align: right;
-// }
+  @include max(md) {
+    text-align: left;
+  }
+}
 
-// .Service__List {
-//   display: grid;
-//   grid-template-columns: repeat(auto-fit, minmax(335px, 1fr));
-//   gap: 50px 18px;
-//   margin-top: 40px;
+.service__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(335px, 1fr));
+  gap: 50px 18px;
+}
 
-//   @include max(md) {
-//     grid-template-columns: 1fr;
-//     column-gap: 0;
-//     margin-top: 20px;
-//   }
-// }
+.card__img {
+  width: 100%;
+  object-fit: cover;
+  height: auto;
+}
 
-// .Service__Item {
-// }
+.card__body {
+  padding-right: 20px;
+  margin-top: 20px;
+  text-align: right;
 
-// .Service__ItemFoot {
-//   display: flex;
-//   flex-direction: column;
-//   padding-top: 20px;
-//   padding-right: 20px;
+  @include max(md) {
+    padding-right: 0;
+  }
+}
 
-//   @include max(md) {
-//     padding-right: 0;
-//   }
-// }
+.card__text {
+  text-align: left;
+}
 
-// .Service__Thumb {
-//   // height: 170px;
-// }
-
-// .Service__Text {
-//   display: -webkit-box;
-//   min-height: 114px;
-//   overflow: hidden;
-//   font-family: 'Noto Sans JP';
-//   font-size: 16px;
-//   font-style: normal;
-//   font-weight: $Regular;
-//   line-height: 2.375;
-//   color: $cBlack;
-//   -webkit-box-orient: vertical;
-//   -webkit-line-clamp: 3;
-
-//   @include max(md) {
-//     min-height: 64px;
-//     font-size: 14px;
-//     line-height: 2.28;
-//   }
-// }
-
-// .Service__More {
-//   justify-content: center;
-//   width: 141px;
-//   padding: 10px 0;
-//   margin-top: 20px;
-//   margin-left: auto;
-//   border: 1px solid $cPrimary;
-//   border-radius: 4px;
-// }
-
-// .Service__MoreLink {
-// }
+.card__btn {
+  display: inline-flex;
+  justify-content: center;
+  min-width: 141px;
+  max-width: 100%;
+  padding: 13px;
+  margin-top: 20px;
+  border: 1px solid $cPrimary;
+  border-radius: 4px;
+}
 
 // // *----------------------------------------
 // // Works
