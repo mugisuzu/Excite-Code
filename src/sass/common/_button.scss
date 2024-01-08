@@ -34,10 +34,8 @@
   }
 
   &:hover::before {
-    @include hover {
-      background: $cSecondary;
-      transform: scale(1, 1);
-    }
+    background: $cSecondary;
+    transform: scale(1, 1);
   }
 
   &::after {
@@ -53,8 +51,6 @@
   }
 
   &:hover::after {
-    @include hover {
-      transform: translateX(5px);
-    }
+    transform: translateX(5px);
   }
 }

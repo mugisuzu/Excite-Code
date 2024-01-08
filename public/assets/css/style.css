@@ -1,91 +1,168 @@
+* {
+  padding: 0;
+  margin: 0;
+  line-height: calc(0.25rem + 1em + 0.25rem);
+}
+
 *,
-*::before,
-*::after {
+::before,
+::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
+*:where(:not(fieldset, progress, meter)) {
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  border-style: solid;
+  border-width: 0;
+}
+
 html {
+  block-size: 100%;
   -webkit-text-size-adjust: none;
      -moz-text-size-adjust: none;
       -ms-text-size-adjust: none;
           text-size-adjust: none;
 }
 
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
-  padding: 0;
-  margin: 0;
+@media (prefers-reduced-motion: no-preference) {
+  html:focus-within {
+    scroll-behavior: smooth;
+  }
 }
-
-ul,
-ol {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
 body {
-  min-height: 100vh;
-  line-height: 1.5;
+  text-rendering: optimizespeed;
+  min-block-size: 100%;
 }
 
-h1,
-h2,
-h3,
-h4,
-button,
-input,
-label {
-  line-height: 1.1;
+:where(img, svg, video, canvas, audio, iframe, embed, object) {
+  display: block;
 }
 
-h1,
-h2,
-h3,
-h4 {
-  text-wrap: balance;
+:where(img, svg, video) {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+:where(svg) {
+  fill: currentcolor;
+  stroke: none;
+}
+
+:where(svg):where(:not([fill])) {
+  fill: none;
+  stroke: currentcolor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+:where(svg):where(:not([width])) {
+  inline-size: 5rem;
+}
+
+:where(input, button, textarea, select),
+:where(input[type=file])::-webkit-file-upload-button {
+  font: inherit;
+  font-size: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+  word-spacing: inherit;
+}
+
+:where(textarea) {
+  resize: vertical;
+}
+
+@supports (resize: block) {
+  :where(textarea) {
+    resize: block;
+  }
+}
+:where(p, h1, h2, h3, h4, h5, h6) {
+  overflow-wrap: break-word;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+:where(ul, ol) {
+  list-style-position: inside;
+}
+
+:where(ul, ol)[role=list] {
+  list-style: none;
 }
 
 a:not([class]) {
   -webkit-text-decoration-skip: ink;
           text-decoration-skip-ink: auto;
-  color: currentcolor;
 }
 
-img,
-picture {
-  display: block;
-  max-width: 100%;
+:where(a[href], area, button, input, label[for], select, summary, textarea, [tabindex]:not([tabindex*="-"])) {
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
 }
 
-input,
-button,
-textarea,
-select {
-  font: inherit;
+:where(input[type=file]) {
+  cursor: auto;
 }
 
-textarea:not([rows]) {
-  min-height: 10em;
+:where(input[type=file])::-webkit-file-upload-button {
+  cursor: pointer;
 }
 
-:target {
-  scroll-margin-block: 5ex;
+:where(input[type=file])::-webkit-file-upload-button,
+:where(input[type=file])::file-selector-button {
+  cursor: pointer;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :focus-visible {
+    -webkit-transition: outline-offset 145ms cubic-bezier(0.25, 0, 0.4, 1);
+    transition: outline-offset 145ms cubic-bezier(0.25, 0, 0.4, 1);
+  }
+  :where(:not(:active)):focus-visible {
+    -webkit-transition-duration: 0.25s;
+            transition-duration: 0.25s;
+  }
+}
+:where(:not(:active)):focus-visible {
+  outline-offset: 5px;
+}
+
+:where(input[type=file])::-webkit-file-upload-button {
+  text-align: center;
+  -webkit-user-select: none;
+          user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+:where(button, button[type], input[type=button], input[type=submit], input[type=reset]),
+:where(input[type=file])::-webkit-file-upload-button,
+:where(input[type=file])::file-selector-button {
+  text-align: center;
+  -webkit-user-select: none;
+          user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+:where(button, button[type], input[type=button], input[type=submit], input[type=reset])[disabled] {
+  cursor: not-allowed;
 }
 
 body {
   font-family: "Noto Sans JP", sans-serif;
   line-height: 1.6;
   color: #000;
+}
+
+ul, ol {
+  list-style: none;
 }
 
 a {
@@ -133,6 +210,11 @@ a[href^="tel:"] {
   padding-inline: 20px;
   margin-inline: auto;
 }
+@media (width < 769px) {
+  .inner {
+    padding-bottom: 80px;
+  }
+}
 
 .text {
   font-size: 16px;
@@ -141,8 +223,33 @@ a[href^="tel:"] {
 }
 @media (width < 769px) {
   .text {
+    font-size: 14px;
     line-height: 2.2857142857;
   }
+}
+
+.heading {
+  font-family: "Oswald", "Roboto", "Noto Sans JP", sans-serif;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.heading--primary {
+  margin-bottom: 40px;
+  font-size: 70px;
+  line-height: 1.4857142857;
+}
+@media (width < 769px) {
+  .heading--primary {
+    margin-bottom: 20px;
+    font-size: 38px;
+    line-height: 1.4736842105;
+  }
+}
+
+.heading--secondary {
+  font-size: 100px;
+  line-height: 1.48;
 }
 
 .gnav {
@@ -355,21 +462,10 @@ a[href^="tel:"] {
   -webkit-transform-origin: left top;
           transform-origin: left top;
 }
-@media (hover: hover) {
-  .more:hover::before:where(:-webkit-any-link, :enabled, summary):hover {
-    background: #001e63;
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
-  }
-  .more:hover::before:where(:-moz-any-link, :enabled, summary):hover {
-    background: #001e63;
-    transform: scale(1, 1);
-  }
-  .more:hover::before:where(:any-link, :enabled, summary):hover {
-    background: #001e63;
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
-  }
+.more:hover::before {
+  background: #001e63;
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
 }
 .more::after {
   width: 5px;
@@ -386,18 +482,9 @@ a[href^="tel:"] {
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
-@media (hover: hover) {
-  .more:hover::after:where(:-webkit-any-link, :enabled, summary):hover {
-    -webkit-transform: translateX(5px);
-            transform: translateX(5px);
-  }
-  .more:hover::after:where(:-moz-any-link, :enabled, summary):hover {
-    transform: translateX(5px);
-  }
-  .more:hover::after:where(:any-link, :enabled, summary):hover {
-    -webkit-transform: translateX(5px);
-            transform: translateX(5px);
-  }
+.more:hover::after {
+  -webkit-transform: translateX(5px);
+          transform: translateX(5px);
 }
 
 [class^=fade] {
@@ -746,6 +833,7 @@ a[href^="tel:"] {
 }
 .about .section__inner {
   padding-top: 60px;
+  padding-bottom: 0;
 }
 @media (width < 769px) {
   .about .section__inner {
@@ -830,6 +918,64 @@ a[href^="tel:"] {
   .media__btn {
     margin-top: 40px;
   }
+}
+
+.service .section__inner {
+  width: min(100%, 1141px);
+}
+
+.service .heading {
+  text-align: right;
+}
+@media (width < 769px) {
+  .service .heading {
+    text-align: left;
+  }
+}
+
+.service__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(335px, 1fr));
+  gap: 50px 18px;
+}
+
+.card__img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: auto;
+}
+
+.card__body {
+  padding-right: 20px;
+  margin-top: 20px;
+  text-align: right;
+}
+@media (width < 769px) {
+  .card__body {
+    padding-right: 0;
+  }
+}
+
+.card__text {
+  text-align: left;
+}
+
+.card__btn {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 141px;
+  max-width: 100%;
+  padding: 13px;
+  margin-top: 20px;
+  border: 1px solid #011950;
+  border-radius: 4px;
 }
 
 .u-spOnly {
