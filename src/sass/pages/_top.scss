@@ -76,7 +76,7 @@
     margin-top: 60px;
     font-size: 150px;
     font-weight: $bold;
-    line-height: lh(150,217);
+    line-height: lh(150, 217);
     color: $cPrimary;
     white-space: nowrap;
     transform: translateX(100%);
@@ -96,89 +96,80 @@
   }
 }
 
-// // *----------------------------------------
-// // About us
-// // ----------------------------------------*/
+// * about
+// ----------------------------------------*
 
-// .About {
-// }
+.about .section__inner {
+  padding-top: 60px;
 
-// .About__Inner {
-//   display: flex;
-//   gap: 60px;
-//   padding-block: 0;
-//   margin-top: 60px;
+  @include max(md) {
+    padding-top: 20px;
+  }
+}
 
-//   @include max(md) {
-//     flex-direction: column;
-//     gap: 30px;
-//     margin-top: 20px;
-//   }
-// }
+.media {
+  display: flex;
 
-// .Inner {
-// }
+  @include max(md) {
+    flex-direction: column;
+  }
+}
 
-// .About__Media {
-//   flex-shrink: 0;
-//   width: 48.2456140351%;
+.media__imgWrap {
+  flex-shrink: 0;
+  width: 50%;
+  margin-right: 5.4545%;
 
-//   @include max(md) {
-//     width: 100%;
-//   }
+  @include max(md) {
+    width: 100%;
+    margin-right: 0;
+  }
+}
 
-//   img {
-//     // height: 100%;
-//     // object-fit: cover;
-//   }
-// }
+.media__img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
 
-// .About__TextArea {
-//   display: flex;
-//   flex-direction: column;
+.media__textWrap {
+  padding-top: 6.3636%;
+  padding-bottom: 9.3636%;
 
-//   // width: 42.9824561404%;
-//   // max-width: 490px;
-//   padding-top: 70px;
-//   color: $cBlack;
+  @include max(md) {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 30px;
+  }
+}
 
-//   // padding-bottom: 7.152777777777778vw;
-//   @include max(lg) {
-//     padding-top: 8px;
-//   }
-// }
+.media__heading {
+  font-family: $secondFont;
+  font-size: 14px;
+  font-weight: $bold;
+  line-height: lh(14, 21);
+}
 
-// .About__Title {
-//   font-family: $SecondFont;
-//   font-size: 14px;
-//   font-weight: $Bold;
-// }
+.media__textBox {
+  margin-top: 3.6364%;
 
-// .About__Summary {
-// }
+  @include max(md) {
+    margin-top: 30px;
+  }
+}
 
-// .About__Text {
-//   margin-top: 40px;
-//   font-family: 'Noto Sans JP';
-//   font-size: 16px;
-//   font-style: normal;
-//   font-weight: $Regular;
-//   line-height: 2.375;
+.media__text {
+  font-size: clamp(0.875rem, 0.446rem + 0.89vw, 1rem);
+}
 
-//   @include max(md) {
-//     margin-top: 30px;
-//     font-size: 14px;
-//     line-height: 2.28;
-//   }
-// }
+.media__btn {
+  margin-top: 3.6364%;
+  text-align: right;
 
-// .About__More {
-//   justify-content: flex-end;
-//   margin-top: 40px;
-// }
-
-// .About__MoreLink {
-// }
+  @include max(md) {
+    margin-top: 40px;
+  }
+}
 
 // // *----------------------------------------
 // // Service

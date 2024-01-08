@@ -128,9 +128,21 @@ a[href^="tel:"] {
 }
 
 .inner {
-  width: min(100vw - 20px, 1140px);
+  width: min(100%, 1140px);
   padding-block: 120px;
+  padding-inline: 20px;
   margin-inline: auto;
+}
+
+.text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 2.375;
+}
+@media (width < 769px) {
+  .text {
+    line-height: 2.2857142857;
+  }
 }
 
 .gnav {
@@ -316,6 +328,76 @@ a[href^="tel:"] {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.more {
+  position: relative;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.1428571429;
+  color: #001e63;
+  text-transform: uppercase;
+}
+.more::before {
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  content: "";
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  -webkit-transform: scale(0, 1);
+          transform: scale(0, 1);
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+}
+@media (hover: hover) {
+  .more:hover::before:where(:-webkit-any-link, :enabled, summary):hover {
+    background: #001e63;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  .more:hover::before:where(:-moz-any-link, :enabled, summary):hover {
+    background: #001e63;
+    transform: scale(1, 1);
+  }
+  .more:hover::before:where(:any-link, :enabled, summary):hover {
+    background: #001e63;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+}
+.more::after {
+  width: 5px;
+  height: 9px;
+  content: "";
+  background-image: url("../images/icon/icon_more_arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+@media (hover: hover) {
+  .more:hover::after:where(:-webkit-any-link, :enabled, summary):hover {
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+  }
+  .more:hover::after:where(:-moz-any-link, :enabled, summary):hover {
+    transform: translateX(5px);
+  }
+  .more:hover::after:where(:any-link, :enabled, summary):hover {
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+  }
 }
 
 [class^=fade] {
@@ -662,6 +744,94 @@ a[href^="tel:"] {
             transform: translateX(-150%);
   }
 }
+.about .section__inner {
+  padding-top: 60px;
+}
+@media (width < 769px) {
+  .about .section__inner {
+    padding-top: 20px;
+  }
+}
+
+.media {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (width < 769px) {
+  .media {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.media__imgWrap {
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  width: 50%;
+  margin-right: 5.4545%;
+}
+@media (width < 769px) {
+  .media__imgWrap {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+.media__img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.media__textWrap {
+  padding-top: 6.3636%;
+  padding-bottom: 9.3636%;
+}
+@media (width < 769px) {
+  .media__textWrap {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 30px;
+  }
+}
+
+.media__heading {
+  font-family: "Oswald", "Roboto", "Noto Sans JP", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.media__textBox {
+  margin-top: 3.6364%;
+}
+@media (width < 769px) {
+  .media__textBox {
+    margin-top: 30px;
+  }
+}
+
+.media__text {
+  font-size: clamp(0.875rem, 0.446rem + 0.89vw, 1rem);
+}
+
+.media__btn {
+  margin-top: 3.6364%;
+  text-align: right;
+}
+@media (width < 769px) {
+  .media__btn {
+    margin-top: 40px;
+  }
+}
+
 .u-spOnly {
   display: none;
 }
