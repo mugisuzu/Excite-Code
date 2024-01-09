@@ -231,7 +231,6 @@ a[href^="tel:"] {
 
 .time {
   display: inline-block;
-  margin-top: auto;
   font-size: 12px;
   font-weight: 700;
   line-height: 1.4166666667;
@@ -239,7 +238,6 @@ a[href^="tel:"] {
 }
 @media (width < 769px) {
   .time {
-    margin-top: 12px;
     font-size: 10px;
   }
 }
@@ -258,9 +256,6 @@ a[href^="tel:"] {
     font-size: 10px;
     line-height: 1.4;
   }
-}
-.tag:not(:last-child) {
-  margin-right: 12px;
 }
 
 .hoverLine {
