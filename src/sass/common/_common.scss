@@ -31,14 +31,12 @@
 
 .time {
   display: inline-block;
-  margin-top: auto;
   font-size: 12px;
   font-weight: $bold;
   line-height: lh(12, 17);
   color: $cSilverGray;
 
   @include max(md) {
-    margin-top: 12px;
     font-size: 10px;
   }
 }
@@ -55,10 +53,6 @@
     padding: 5px 15px;
     font-size: 10px;
     line-height: lh(10, 14);
-  }
-
-  &:not(:last-child) {
-    margin-right: 12px;
   }
 }
 
