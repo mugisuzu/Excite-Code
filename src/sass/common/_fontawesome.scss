@@ -18,3 +18,15 @@
     font-size: 16px;
   }
 }
+
+// * sns
+// ----------------------------------------*
+
+.fa-facebook,
+.fa-twitter,
+.fa-instagram {
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  font-size: 22px;
+}

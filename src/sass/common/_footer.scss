@@ -3,3 +3,221 @@
 // *----------------------------------------
 // footer
 // ----------------------------------------*/
+
+.footer__media {
+  display: flex;
+  flex-direction: row;
+
+  @include max(md) {
+    flex-direction: column;
+  }
+}
+
+.footer__imgWrap {
+  flex-shrink: 0;
+  width: 56.9444%;
+
+  @include max(md) {
+    order: 2;
+    width: 100%;
+  }
+}
+
+.footer__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.footer__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 43.0556%;
+  min-width: 300px;
+  padding: 70px 30px;
+  color: $cWhite;
+  background-color: $cPrimary;
+
+  @include max(md) {
+    align-items: center;
+    order: 1;
+    width: 100%;
+    padding-block: 80px;
+
+    // padding-left: 0;
+  }
+}
+
+.footer__infoInner {
+  width: 275px;
+
+  @include max(md) {
+    width: 227px;
+  }
+}
+
+.footer__infoText {
+  font-size: 18px;
+  line-height: lh(18, 30);
+
+  @include max(md) {
+    font-size: 14px;
+    line-height: lh(14, 28);
+  }
+
+  &:last-of-type {
+    margin-top: 22px;
+    font-size: 14px;
+
+    @include max(md) {
+      margin-top: 10px;
+      font-size: 12px;
+      line-height: lh(12, 17);
+    }
+  }
+}
+
+.footer__infoBtn {
+  font-size: 22px;
+
+  i {
+    padding-top: 5px;
+  }
+}
+
+.footer__infoBtn .btn {
+  justify-content: center;
+  width: 235px;
+  max-width: 100%;
+  padding: 18px;
+  font-size: 22px;
+  line-height: lh(22, 32);
+  background-color: transparent;
+  border: 1px solid $cWhite;
+  border-radius: 4px;
+
+  @include max(md) {
+    width: 227px;
+    font-size: 16px;
+    line-height: lh(16, 23);
+  }
+
+  & > span {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+
+    @include max(md) {
+      gap: 10px;
+    }
+  }
+}
+
+.footer__infoMail {
+  margin-top: 25px;
+
+  @include max(md) {
+    margin-top: 32px;
+  }
+}
+
+.footer__infoTel {
+  margin-top: 20px;
+}
+
+// * footerFoot
+// ----------------------------------------*
+
+.footerFoot {
+  color: $cWhite;
+  background-color: #001135;
+}
+
+.footerFoot__inner {
+  display: grid;
+  grid-template-columns: 1fr 160px;
+  width: min(100%, 1220px);
+  padding: 63px 40px 64px;
+  margin-inline: auto;
+
+  @include max(md) {
+    grid-template-columns: 1fr;
+    padding-bottom: 30px;
+  }
+}
+
+.footer__logoArea {
+  @include max(md) {
+    order: 2;
+  }
+}
+
+.footerFoot__container {
+  display: flex;
+  gap: 46px;
+  align-items: center;
+
+  @include max(md) {
+    flex-direction: column;
+    gap: 50px;
+    align-items: flex-start;
+  }
+}
+
+.footer__logo {
+  margin-top: 37px;
+
+  @include max(md) {
+    width: 114px;
+    height: 80px;
+  }
+}
+
+.footer__sns {
+  display: flex;
+  column-gap: 20px;
+  font-family: $thirdFont;
+}
+
+.copyRight {
+  margin-top: 20px;
+  font-family: $thirdFont;
+
+  @include max(md) {
+    margin-top: 50px;
+  }
+
+  small {
+    font-size: 12px;
+  }
+}
+
+.footer__nav {
+  @include max(md) {
+    order: 1;
+  }
+}
+
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+
+  @include max(md) {
+    row-gap: 24px;
+  }
+}
+
+.footer__navLink {
+  font-size: 16px;
+  line-height: lh(16, 19);
+  text-transform: uppercase;
+
+  @include max(md) {
+    font-size: 14px;
+    line-height: lh(14, 16);
+  }
+}

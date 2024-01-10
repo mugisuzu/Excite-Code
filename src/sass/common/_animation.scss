@@ -1,8 +1,68 @@
 @use '../base/init' as *;
 
 // *----------------------------------------
-// Animation
+// animation
 // ----------------------------------------*
+
+// * hoverアニメーション
+// ----------------------------------------*
+.bgLeft {
+  position: relative;
+  overflow: hidden;
+  transition: ease 0.3s;
+
+  & > span {
+    position: relative;
+    z-index: 3;
+    color: $cWhite;
+  }
+
+  &:hover > span {
+    color: $cPrimary;
+    @include max(md) {
+      color: inherit;
+      }
+
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: $cWhite; /* 背景色 */
+    transition: transform 0.6s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+    transform: scale(0, 1);
+    transform-origin: right top;
+  }
+
+  &:hover::before {
+    transform: scale(1, 1);
+    transform-origin: left top;
+  }
+}
+
+.hoverLine {
+  display: inline-block;
+  text-decoration: none;
+  background-image: -webkit-gradient(linear, left top, right top, from(#000), to(#000));
+  background-image: linear-gradient(90deg, #000, #000); /* 線の色 */
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 0 1px;
+  transition: background-size 0.6s;
+
+  @include max(md) {
+    background: initial;
+  }
+
+  &:hover {
+    background-size: 100% 1px;
+  }
+}
 
 // * スクロールアニメーション
 // ----------------------------------------*
@@ -16,7 +76,6 @@
 
   @include animation($name: fadeInAnime, $duration: 2s);
 }
-
 
 @keyframes fadeInAnime {
   from {
