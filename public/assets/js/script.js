@@ -1,20 +1,21 @@
-// // ハンバーガーメニュー
-// const burger = document.querySelector('#js-hamburger');
-// const spMenu = document.querySelector('#js-spMenu');
-// const body = document.querySelector('body');
+// ハンバーガーメニュー
+const burger = document.querySelector('#js-hamburger');
+const spMenu = document.querySelector('#js-spMenu');
+const body = document.querySelector('body');
 
-// if (burger) {
-//   burger.addEventListener('click', () => {
-//     burger.classList.toggle('is-active');
-//     spMenu.classList.toggle('show');
-//     if (burger.classList.contains('is-active')) {
-//       body.style.overflow = 'hidden';
-//     } else {
-//       body.style.overflow = 'visible';
-//     }
-//   });
-// }
-
+if (burger) {
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('is-active');
+    spMenu.classList.toggle('show');
+    $(spMenu).toggleClass('panelactive'); //ナビゲーションにpanelactiveクラスを付与
+    $('.circleBg').toggleClass('circleactive'); //丸背景にcircleactiveクラスを付与
+    if (burger.classList.contains('is-active')) {
+      body.style.overflow = 'hidden';
+    } else {
+      body.style.overflow = 'visible';
+    }
+  });
+}
 
 // // fadeAnimation
 // function fadeAnimation(el,cl) {
@@ -40,8 +41,6 @@
 // $(window).on('load', function () {
 //   fadeAnimation('.logged-in', 'fadeIn'); /* アニメーション用の関数を呼ぶ*/
 // }); // ここまで画面をスクロールをしたら動かしたい場合の記述
-
-
 
 if (document.getElementById('top')) {
   new Splide('.firstView__splide', {
