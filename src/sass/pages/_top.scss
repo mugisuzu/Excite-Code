@@ -231,6 +231,12 @@
   background-color: $cSectionBg;
 }
 
+.works .section__inner {
+  @include max(md) {
+    padding-top: 60px;
+  }
+}
+
 .works .container {
   padding: 50px 40px;
   background-color: $cWhite;
@@ -239,10 +245,6 @@
     padding-block: 30px 80px;
     margin-inline: -20px;
   }
-}
-
-.worksMedia {
-  // display: flex;
 }
 
 .worksMedia__item {
@@ -425,7 +427,7 @@
     padding-top: 30px;
 
     @include max(md) {
-      padding-top: 0;
+      padding-top: 20px;
     }
   }
 }
@@ -470,6 +472,6 @@
   text-align: right;
 
   @include max(md) {
-      margin-top: 45px;
-    }
+    margin-top: 45px;
+  }
 }
