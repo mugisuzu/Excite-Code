@@ -169,11 +169,6 @@
 
 .footer__logo {
   margin-top: 37px;
-
-  @include max(md) {
-    width: 114px;
-    height: 80px;
-  }
 }
 
 .footer__sns {
