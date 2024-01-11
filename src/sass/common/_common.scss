@@ -18,6 +18,18 @@
   }
 }
 
+.pageInner {
+  width: min(100%, 1140px);
+  padding-inline: 20px;
+  padding-bottom: 120px;
+  margin-inline: auto;
+
+  @include max(md) {
+    padding-top: 30px;
+    padding-bottom: 80px;
+  }
+}
+
 .text {
   font-size: 16px;
   font-weight: $regular;
@@ -53,6 +65,44 @@
     padding: 5px 15px;
     font-size: 10px;
     line-height: lh(10, 14);
+  }
+}
+
+.pageTitle {
+}
+
+.pageTitle__main {
+  display: flex;
+  column-gap: 20px;
+  align-items: center;
+  font-family: $secondFont;
+  font-size: 40px;
+  line-height: lh(40, 59);
+  color: $cBlack;
+  text-transform: capitalize;
+
+  @include max(md) {
+    column-gap: 10px;
+    font-size: 26px;
+    line-height: lh(26, 39);
+  }
+
+  &::after {
+    width: 60px;
+    height: 2px;
+    content: '';
+    background-color: $cBlack;
+  }
+}
+
+.pageTitle__sub {
+  font-size: 16px;
+  line-height: lh(16, 23);
+  color: $cSecondary;
+
+  @include max(md) {
+    font-size: 12px;
+    line-height: lh(12, 17);
   }
 }
 
@@ -136,7 +186,6 @@
   @include max(xl) {
     width: calc(100% - 10px);
   }
-
 }
 
 .pageHeading__inner {
@@ -275,36 +324,8 @@
   }
 }
 
-// *
+// * internalLink
 // ----------------------------------------*
-
-.page {
-}
-
-.page__inner {
-  width: min(100%, 1340px);
-  padding-inline: 10px;
-  margin-inline: auto;
-}
-
-.page__container {
-  width: min(100%, 1120px);
-  padding-inline: 10px;
-  padding-top: 60px;
-  margin-inline: auto;
-
-  @include max(md) {
-    padding-top: 30px;
-  }
-}
-
-.pageAbout {
-}
-
-.page__message {
-  width: min(100%, 840px);
-  margin-inline: auto;
-}
 
 .internalLink {
   display: flex;
@@ -347,12 +368,32 @@
   }
 }
 
+// * page
+// ----------------------------------------*
+
+.page {
+}
+
+.page__inner {
+}
+
+.pageContainer {
+  padding-top: 60px;
+
+  @include max(md) {
+    padding-top: 30px;
+  }
+}
+
+.page__message {
+  width: min(100%, 880px);
+  margin-inline: auto;
+}
+
 .page__messageBody {
-  padding-bottom: 120px;
   margin-top: 100px;
 
   @include max(md) {
-    padding-bottom: 80px;
     margin-top: 60px;
   }
 }
@@ -376,47 +417,69 @@
   }
 }
 
-.u-pcOnly {
+.philosophy .container {
+  @include max(md) {
+    margin-inline: -20px;
+  }
 }
 
-.Philosophy {
+.philosophy__media {
+  display: flex;
+  align-items: center;
+  background-color: $cSectionGrayBg;
+
+  @include max(md) {
+    flex-direction: column;
+    row-gap: 30px;
+  }
 }
 
-.Philosophy__Inner {
-}
+.philosophy__body {
+  padding: 62px 30px 69px;
+  margin-bottom: -84px;
 
-.Philosophy__TitleArea {
+  @include max(md) {
+    padding: 60px 20px 0;
+  }
 }
 
 .Philosophy__Title {
 }
 
-.PageSectionTitle {
+.philosophy__text {
+  margin-top: 60px;
+
+  @include max(md) {
+    margin-top: 30px;
+  }
 }
 
-.Philosophy__TitleMain {
+.philosophy__name {
+  padding-right: 11px;
+  margin-top: 39px;
+  line-height: lh(16, 23);
+  text-align: right;
+
+  @include max(md) {
+    padding-right: 0;
+    margin-top: 30px;
+  }
+
+  span {
+    &:first-child {
+      margin-right: 1em;
+    }
+  }
 }
 
-.PageSectionTitle__TitleSub {
-}
+.philosophy__imgWrap {
+  flex-shrink: 0;
+  width: 360px;
 
-.Philosophy__TitleSub {
-}
-
-.PageSectionTitle__TitleMain {
-}
-
-.Philosophy__Voice {
-}
-
-.Philosophy__Text {
-}
-
-.PageText {
-}
-
-.Philosophy__Name {
-}
-
-.Philosophy__Media {
+  @include max(md) {
+    position: relative;
+    top: 84px;
+    width: 100%;
+    padding-inline: 20px;
+  }
 }
