@@ -1,0 +1,46 @@
+@use '../base/init' as *;
+
+// *----------------------------------------
+// breadcrumb
+// ----------------------------------------*/
+
+.breadcrumbWrap {
+  margin-top: 20px;
+
+  @include max(md) {
+    margin-top: 10px;
+  }
+}
+
+.breadcrumb {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  font-family: $thirdFont;
+}
+
+.breadcrumb__item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 15px;
+  font-weight: $regular;
+  color: $cSilverGray;
+  text-transform: capitalize;
+
+  @include max(md) {
+    font-size: 10px;
+  }
+
+  &:last-child {
+    color: $cGray;
+  }
+
+  &:not(:first-child)::before {
+    display: inline-block;
+    width: 20px;
+    height: 1px;
+    content: '';
+    background-color: $cGray;
+  }
+}

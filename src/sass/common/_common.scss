@@ -78,8 +78,75 @@
 }
 
 .heading--secondary {
-  font-size: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.heading--secondary .heading__main {
+  // font-size: 100px;
+  font-size: clamp(2.75rem, 0.623rem + 9.08vw, 6.25rem);
   line-height: lh(100, 148);
+
+  @include max(md) {
+    // font-size: 44px;
+    line-height: lh(44, 65);
+  }
+
+  @include min(exl) {
+    font-size: 6.9444vw;
+  }
+}
+
+.heading--secondary .heading__sub {
+  margin-top: -15px;
+  font-size: clamp(0.75rem, 0.446rem + 1.3vw, 1.25rem);
+  line-height: lh(20, 29);
+
+  @include max(md) {
+    margin-top: -6px;
+    line-height: lh(12, 17);
+  }
+
+  @include min(exl) {
+    margin-top: -1.0417vw;
+    font-size: 1.3889vw;
+  }
+}
+
+// * pageHeading
+// ----------------------------------------*
+
+.pageHeading {
+  width: calc(100% - 170px);
+  aspect-ratio: 1270 / 514;
+  margin-top: 236px;
+  margin-left: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include max(md) {
+    aspect-ratio: 365 / 280;
+  }
+
+  @include max(lg) {
+    margin-top: 110px;
+  }
+
+  @include max(xl) {
+    width: calc(100% - 10px);
+  }
+
+}
+
+.pageHeading__inner {
+  width: clamp(11.875rem, 0.099rem + 50.24vw, 31.25rem);
+  padding: 16px 50px 47px;
+  background-color: $cWhite;
+
+  @include max(md) {
+    padding: 18px 18px 36px;
+  }
 }
 
 // * logo
@@ -210,3 +277,146 @@
 
 // *
 // ----------------------------------------*
+
+.page {
+}
+
+.page__inner {
+  width: min(100%, 1340px);
+  padding-inline: 10px;
+  margin-inline: auto;
+}
+
+.page__container {
+  width: min(100%, 1120px);
+  padding-inline: 10px;
+  padding-top: 60px;
+  margin-inline: auto;
+
+  @include max(md) {
+    padding-top: 30px;
+  }
+}
+
+.pageAbout {
+}
+
+.page__message {
+  width: min(100%, 840px);
+  margin-inline: auto;
+}
+
+.internalLink {
+  display: flex;
+  column-gap: 120px;
+  justify-content: center;
+
+  @include max(md) {
+    column-gap: 40px;
+    padding-inline: 20px;
+  }
+}
+
+.internalLink__item {
+  display: flex;
+  column-gap: 9px;
+  align-items: center;
+
+  @include max(md) {
+    column-gap: 6px;
+  }
+
+  &::after {
+    display: inline-block;
+    width: 9px;
+    height: 5px;
+    content: '';
+    background-image: url('../images/icon/icon_arrow_down.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  a {
+    font-size: 16px;
+    color: $cPrimary;
+
+    @include max(md) {
+      font-size: 12px;
+    }
+  }
+}
+
+.page__messageBody {
+  padding-bottom: 120px;
+  margin-top: 100px;
+
+  @include max(md) {
+    padding-bottom: 80px;
+    margin-top: 60px;
+  }
+}
+
+.page__messageTitle {
+  font-size: 40px;
+  font-weight: $medium;
+  line-height: lh(40, 60);
+
+  @include max(md) {
+    font-size: 18px;
+    line-height: lh(18, 37);
+  }
+}
+
+.page__messageText {
+  margin-top: 40px;
+
+  @include max(md) {
+    margin-top: 30px;
+  }
+}
+
+.u-pcOnly {
+}
+
+.Philosophy {
+}
+
+.Philosophy__Inner {
+}
+
+.Philosophy__TitleArea {
+}
+
+.Philosophy__Title {
+}
+
+.PageSectionTitle {
+}
+
+.Philosophy__TitleMain {
+}
+
+.PageSectionTitle__TitleSub {
+}
+
+.Philosophy__TitleSub {
+}
+
+.PageSectionTitle__TitleMain {
+}
+
+.Philosophy__Voice {
+}
+
+.Philosophy__Text {
+}
+
+.PageText {
+}
+
+.Philosophy__Name {
+}
+
+.Philosophy__Media {
+}

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- noindexなので公開後に削除 -->
+    <meta name="robots" content="noindex,nofollow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- OGPなど -->
+    <title>タイトル</title>
+
+    <!-- ファビコン -->
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Oswald:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- fv -->
+    <!-- <link rel="preload" as="image" href="./public/assets/images/about/title_bg.jpg" />
+    <link rel="preload" as="image" href="./public/assets/images/service/title_bg.jpg" />
+    <link rel="preload" as="image" href="./public/assets/images/work/title_bg.jpg" />
+    <link rel="preload" as="image" href="./public/assets/images/news/title_bg.jpg" />
+    <link rel="preload" as="image" href="./public/assets/images/contac/title_bg.jpg" />
+    <link rel="preload" as="image" href="./public/assets/images/about/title_bg_sp.jpg" />
+    <link rel="preload" as="image" href="./public/assets/images/service/title_bg_sp.jpg" />
+    <link rel="preload" as="image" href="./public/assets/images/work/title_bg_sp.jpg" />
+    <link rel="preload" as="image" href="./public/assets/images/news/title_bg_sp.jpg" />
+    <link rel="preload" as="image" href="./public/assets/images/contac/title_bg_sp.jpg" /> -->
+
+    <!-- Splide -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css" />
+    <!-- css -->
+    <link rel="stylesheet" href="./public/assets/css/style.css" />
+  </head>
+
+  <body id="about">
+    <!-- header -->
+    <header class="header">
+      <div class="header__inner">
+        <h1 class="header__logo logo">
+          <a class="logo__link" href="#"><img src="./public/assets/images/header/header_logo.svg" width="258" height="180" decoding="async" alt="Excite Code" /></a>
+        </h1>
+
+        <button class="hamburger" id="js-hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="header__nav gnav">
+          <ul class="gnav__list">
+            <li class="gnav__item"><a class="gnav__link" href="#">top</a></li>
+            <li class="gnav__item"><a class="gnav__link" href="#">about</a></li>
+            <li class="gnav__item"><a class="gnav__link" href="#">service</a></li>
+            <li class="gnav__item"><a class="gnav__link" href="#">works</a></li>
+            <li class="gnav__item"><a class="gnav__link" href="#">news</a></li>
+          </ul>
+          <div class="gnav__btn">
+            <a class="gnav__btnLink btn" href="#"><i class="fa-regular fa-envelope"></i><span>contact</span></a>
+          </div>
+        </nav>
+        <!-- /.header__nav -->
+
+        <div class="spMenu show" id="js-spMenu">
+          <div class="spMenu__inner">
+            <div class="spMenu__logo logo">
+              <a href="#"><img src="./public/assets/images/header/header_logo_sp_menu.svg" width="114" height="80" decoding="async" alt="Excite Code" /></a>
+            </div>
+
+            <nav class="spMenu__nav">
+              <ul class="spMenu__list">
+                <li class="spMenu__item"><a class="spMenu__link" href="#">top</a></li>
+                <li class="spMenu__item"><a class="spMenu__link" href="#">about</a></li>
+                <li class="spMenu__item"><a class="spMenu__link" href="#">service</a></li>
+                <li class="spMenu__item"><a class="spMenu__link" href="#">works</a></li>
+                <li class="spMenu__item"><a class="spMenu__link" href="#">news</a></li>
+              </ul>
+              <ul class="spMenu__sns sns">
+                <li class="sns__item">
+                  <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                </li>
+                <li class="sns__item">
+                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </li>
+                <li class="sns__item">
+                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </li>
+              </ul>
+            </nav>
+            <div class="circleBg"></div>
+          </div>
+        </div>
+        <!-- /.spMenu -->
+      </div>
+    </header>
+    <!-- /.header -->
+
+    <!-- main -->
+    <main class="main">
+      <div class="pageHeading pageHeadingAbout">
+        <div class="pageHeading__inner">
+          <h1 class="heading heading--secondary">
+            <span class="heading__main">about</span>
+            <span class="heading__sub">私たちについて</span>
+          </h1>
+        </div>
+      </div>
+
+      <div class="page">
+        <div class="page__inner">
+          <div class="breadcrumbWrap">
+            <ol class="breadcrumb">
+              <li class="breadcrumb__item">top</li>
+              <li class="breadcrumb__item">about</li>
+            </ol>
+          </div>
+
+          <div class="page__container">
+            <section class="pageAbout">
+              <div class="page__message">
+                <ul class="internalLink">
+                  <li class="internalLink__item"><a href="#">経理理念</a></li>
+                  <li class="internalLink__item"><a href="#">アクセス</a></li>
+                  <li class="internalLink__item"><a href="#">会社概要</a></li>
+                </ul>
+
+                <div class="page__messageBody">
+                  <h2 class="page__messageTitle">
+                    国境を超え、メーカーを超え<br />
+                    「型にはまらない」あなただけの歓びを
+                  </h2>
+                  <p class="page__messageText text">
+                    弊社は、輸入車選びのすべてを見つめ直し、新たなスタイルを提案するインポート・セレクト・ブランドです。<br class="u-pcOnly" />
+                    これまでの憧れだけや批評家の意見といったイメージで選ぶのではなく、オーナー様となる方がクルマから直接感じるリアルな感性を第一にした、最良の一台との出会いをコーディネートいたします。
+                  </p>
+                </div>
+              </div>
+
+
+          <!-- <section class="Philosophy">
+            <div class="Philosophy__Inner">
+              <div class="Philosophy__TitleArea">
+                <h2 class="Philosophy__Title PageSectionTitle">
+                  <span class="Philosophy__TitleMain PageSectionTitle__TitleSub">経営理念</span>
+                  <span class="Philosophy__TitleSub PageSectionTitle__TitleMain">philosophy</span>
+                </h2>
+                <div class="Philosophy__Voice">
+                  <p class="Philosophy__Text PageText">
+                    「お客様とは一生涯のお付き合い」をモットーとし、同時に社員一人一人が責任と誇り、使命感を持ち日々の仕事にやりがいと喜びを感じることができる会社を目指します。そういう「社員満足」があってこそ、本当の「お客様に満足」が可能になり、そしてお客様のご満足がさらに社員の満足を高めてくれるからです。心の豊かさは楽とかゆとりとかいうより仕事の充実感に求めねばなりません。我々は現状に満足することなく挑戦し続けます。
+                  </p>
+                  <p class="Philosophy__Name PageText"><span>代表取締役</span><span>田中太郎</span></p>
+                </div>
+              </div>
+
+              <div class="Philosophy__Media">
+                <picture>
+                  <source srcset="./public/assets/images/about/philosophy_sp.jpg" media="(max-width: 768px)" />
+                  <img src="./public/assets/images/about/philosophy.jpg" width="720" height="1070" decoding="async" loading="lazy" alt="代表取締役 田中太郎" />
+                </picture>
+              </div>
+            </div>
+          </section> -->
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="container">
+          <div class="footer__media">
+            <div class="footer__imgWrap">
+              <picture>
+                <source media="(max-width: 768px)" srcset="./public/assets/images/footer/img_sp.jpg" />
+                <img class="footer__img" src="./public/assets/images/footer/img.jpg" width="1640" height="892" decoding="async" loading="lazy" alt="" />
+              </picture>
+            </div>
+
+            <div class="footer__info">
+              <div class="footer__infoInner">
+                <p class="footer__infoText">輸入車の購入や修理のご相談など<br />お気軽にお問い合わせください。</p>
+                <div class="footer__infoBtn">
+                  <a class="btn bgLeft footer__infoMail" href="#"
+                    ><span><i class="fa-regular fa-envelope"></i><span class="footer__btnText">お問い合わせ</span></span></a
+                  >
+                  <a class="btn bgLeft footer__infoTel" href="#"
+                    ><span><i class="fa-solid fa-phone"></i><span class="footer__btnText">0000-000-000</span></span></a
+                  >
+                </div>
+                <p class="footer__infoText">受付時間 : 火曜日を除く 10：00〜18：00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="footerFoot">
+            <div class="footerFoot__inner">
+              <div class="footer__logoArea">
+                <div class="footerFoot__container">
+                  <div class="footer__logo logo">
+                    <img src="./public/assets/images/footer/footer_logo.svg" width="258" height="180" decoding="async" loading="lazy" alt="Excite Code" />
+                  </div>
+                  <ul class="footer__sns sns">
+                    <li class="sns__item">
+                      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    </li>
+                    <li class="sns__item">
+                      <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </li>
+                    <li class="sns__item">
+                      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                  </ul>
+                </div>
+                <p class="copyRight"><small>&copy;2022 ExciteCode Automobile</small></p>
+              </div>
+
+              <div class="footer__nav">
+                <ul class="footer__list">
+                  <li class="footer__navItem"><a class="footer__navLink" href="#">top</a></li>
+                  <li class="footer__navItem"><a class="footer__navLink" href="#">about</a></li>
+                  <li class="footer__navItem"><a class="footer__navLink" href="#">service</a></li>
+                  <li class="footer__navItem"><a class="footer__navLink" href="#">works</a></li>
+                  <li class="footer__navItem"><a class="footer__navLink" href="#">news</a></li>
+                  <li class="footer__navItem"><a class="footer__navLink" href="#">contact</a></li>
+                  <li class="footer__navItem"><a class="footer__navLink" href="#">プライバシーポリシー</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- /.footer -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      defer
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js" defer></script>
+    <script src="./public/assets/js/script.js" defer></script>
+  </body>
+</html>

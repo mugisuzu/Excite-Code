@@ -1,0 +1,307 @@
+@use '../base/init' as *;
+
+// *----------------------------------------
+// About
+// ----------------------------------------*/
+
+// * pageHeading
+// ----------------------------------------*
+
+.pageHeadingAbout {
+  background-image: url('../images/about/title_bg.jpg');
+
+  @include max(md) {
+    background-image: url('../images/about/title_bg_sp.jpg');
+  }
+}
+
+// *----------------------------------------
+// PageAbout
+// ----------------------------------------*/
+
+// .PageAbout {
+// }
+
+.PageAbout__Inner {
+  // padding-top: 98px;
+}
+
+.PageAbout__Container {
+  width: min(100%, 880px);
+  padding-inline: 0;
+  padding-top: 0;
+  // padding-bottom: 120px;
+  margin-top: 100px;
+
+  @include max(md) {
+    // padding-bottom: 80px;
+    margin-top: 60px;
+  }
+}
+
+// // *----------------------------------------
+// // Philosophy
+// // ----------------------------------------*/
+// .Philosophy {
+//   max-width: 1100px;
+//   padding-block: 0;
+//   margin-inline: auto;
+//   background-color: $cSectionBg;
+
+//   @include max(lg) {
+//     margin-inline: -10px -10px;
+//   }
+// }
+
+// .Philosophy__Inner {
+//   display: flex;
+//   column-gap: 30px;
+
+//   @include max(lg) {
+//     flex-direction: column;
+//     padding-inline: 20px;
+//   }
+// }
+
+// .Philosophy__TitleArea {
+//   padding-top: 70px;
+//   padding-bottom: 70px;
+
+//   @include max(md) {
+//     padding-top: 60px;
+//     padding-bottom: 30px;
+//   }
+// }
+
+// .Philosophy__Title {
+//   padding-left: 32px;
+
+//   @include max(md) {
+//     padding-left: 0;
+//   }
+// }
+
+// .Philosophy__Voice {
+//   padding-left: 30px;
+//   margin-top: 60px;
+
+//   @include max(md) {
+//     padding-left: 0;
+//     margin-top: 30px;
+//   }
+// }
+
+// .Philosophy__Text {
+//   line-height: 2.375;
+
+//   @include max(md) {
+//     line-height: 2.28;
+//   }
+// }
+
+// .Philosophy__Name {
+//   padding-right: 11px;
+//   margin-top: 40px;
+//   text-align: right;
+
+//   @include max(md) {
+//     padding-right: 0;
+//     margin-top: 30px;
+//   }
+
+//   span {
+//     &:first-child {
+//       margin-right: 1em;
+//     }
+//   }
+// }
+
+// .Philosophy__Media {
+//   flex-shrink: 0;
+//   width: 32.7273%;
+
+//   @include max(lg) {
+//     align-self: center;
+//     padding-bottom: 80px;
+//   }
+
+//   @include max(md) {
+//     width: 100%;
+//   }
+// }
+
+// // *----------------------------------------
+// // Access
+// // ----------------------------------------*/
+
+// // .Access {
+// // }
+
+// .Access__Inner {
+//   @include max(md) {
+//     padding-inline: 10px;
+//   }
+// }
+
+// .Access__AddressArea {
+//   display: inline-flex;
+//   margin-top: 8px;
+//   font-style: normal;
+
+//   @include max(md) {
+//     flex-direction: column;
+//     margin-top: 20px;
+//   }
+// }
+
+// .Access__Post {
+//   margin-right: 1em;
+
+//   @include max(md) {
+//     margin-top: 4px;
+//   }
+// }
+
+// .Access__Map {
+//   margin-top: 60px;
+
+//   @include max(md) {
+//     margin-top: 20px;
+//   }
+
+//   iframe {
+//     width: 100%;
+//     height: 100%;
+//     aspect-ratio: 1100 / 400;
+
+//     @include max(md) {
+//       aspect-ratio: 335 / 400;
+//     }
+//   }
+// }
+
+// // *----------------------------------------
+// // Company
+// // ----------------------------------------*/
+
+// .Company {
+//   margin-right: calc(50% - 50vw);
+//   margin-left: calc(50% - 50vw);
+//   background-color: $cSectionBg;
+// }
+
+// .Company__Inner {
+//   padding-top: 70px;
+
+//   @include max(md) {
+//     padding-top: 60px;
+//   }
+// }
+
+// .CompanyOverview {
+//   margin-top: 60px;
+
+//   @include max(md) {
+//     margin-top: 30px;
+//   }
+// }
+
+// .CompanyOverview__Item {
+//   display: flex;
+//   padding-bottom: 40px;
+//   border-bottom: 1px solid $cGrayBorder;
+
+//   @include max(md) {
+//     flex-direction: column;
+//     row-gap: 16px;
+//     padding-bottom: 20px;
+//   }
+
+//   &:not(:first-child) {
+//     padding-top: 40px;
+
+//     @include max(md) {
+//       padding-top: 20px;
+//     }
+//   }
+// }
+
+// .CompanyOverview__Item--address {
+//   & span:first-of-type {
+//     margin-right: 18px;
+
+//     @include max(md) {
+//       margin-right: 28px;
+//     }
+//   }
+// }
+
+// .CompanyOverview__Content {
+//   display: flex;
+//   flex-direction: column;
+
+//   p + p {
+//     margin-top: 20px;
+
+//     @include max(md) {
+//       margin-top: 10px;
+//     }
+//   }
+
+//   span:first-of-type {
+//     margin-right: 1em;
+//   }
+// }
+
+// .CompanyOverview__Heading {
+//   width: 130px;
+//   font-weight: $Medium;
+// }
+
+// .CompanyOverview__Text {
+//   padding-left: 40px;
+
+//   @include max(md) {
+//     padding-left: 0;
+//   }
+// }
+
+// .Company__Slide {
+//   width: 100%;
+//   height: auto;
+//   padding-bottom: 120px;
+//   overflow: hidden;
+
+//   @include max(md) {
+//     padding-bottom: 80px;
+//   }
+
+//   img {
+//     @include max(md) {
+//     }
+//   }
+// }
+
+// .Company__SlideList {
+//   column-gap: 10px;
+
+//   @include max(md) {
+//     column-gap: 0;
+//   }
+// }
+
+// .Company__SlideItem {
+//   width: 480px;
+//   height: auto;
+//   aspect-ratio: 480 / 400;
+
+//   @include max(md) {
+//     widows: 185px;
+//     aspect-ratio: 185 / 150;
+//   }
+
+//   img {
+//     width: 100%;
+//     height: 100%;
+//   }
+// }
