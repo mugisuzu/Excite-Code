@@ -6,6 +6,10 @@
 // bodyなどサイト全体リセット上書き
 // ----------------------------------------*
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: $baseFont;
   line-height: 1.6;

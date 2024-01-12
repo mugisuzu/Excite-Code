@@ -19,10 +19,6 @@
 
   &:hover > span {
     color: $cPrimary;
-    @include max(md) {
-      color: inherit;
-      }
-
   }
 
   &::before {
