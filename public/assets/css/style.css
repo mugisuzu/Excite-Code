@@ -637,6 +637,15 @@ a[href^="tel:"] {
   }
 }
 
+.page {
+  padding-top: 20px;
+}
+@media (width < 769px) {
+  .page {
+    padding-top: 10px;
+  }
+}
+
 .pageContainer {
   padding-top: 60px;
 }
@@ -1475,12 +1484,6 @@ a[href^="tel:"] {
   width: min(100%, 1340px);
   padding-inline: 10px;
   margin-inline: auto;
-  margin-top: 20px;
-}
-@media (width < 769px) {
-  .breadcrumbWrap {
-    margin-top: 10px;
-  }
 }
 
 .breadcrumb {
@@ -2382,6 +2385,205 @@ a[href^="tel:"] {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.pageHeadingService {
+  background-image: url("../images/service/title_bg.jpg");
+}
+@media (width < 769px) {
+  .pageHeadingService {
+    background-image: url("../images/service/title_bg_sp.jpg");
+  }
+}
+
+.serviceMedia__inner {
+  width: min(100%, 1240px);
+  padding-inline: 20px;
+  padding-bottom: 0;
+}
+@media (width < 769px) {
+  .serviceMedia__inner {
+    padding-bottom: 30px;
+  }
+}
+
+@media (width < 769px) {
+  .serviceMedia .container {
+    margin-inline: -20px;
+  }
+}
+
+.serviceMedia__bodyWrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f8f8f8;
+}
+@media (width < 769px) {
+  .serviceMedia__bodyWrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-inline: 20px;
+  }
+}
+
+.serviceMedia__body {
+  padding-left: 50px;
+  margin-right: 9.1667%;
+}
+@media (width < 769px) {
+  .serviceMedia__body {
+    padding-top: 60px;
+    padding-left: 0;
+    margin-right: 0;
+  }
+}
+
+.serviceMedia__num {
+  position: relative;
+  display: inline-block;
+  font-family: "Oswald", "Roboto", "Noto Sans JP", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.475;
+  color: #001e63;
+}
+@media (width < 769px) {
+  .serviceMedia__num {
+    font-size: 32px;
+    line-height: 1.46875;
+  }
+}
+.serviceMedia__num::after {
+  position: absolute;
+  top: calc(50% + 1px);
+  right: -16px;
+  display: inline-block;
+  width: 1px;
+  height: 34px;
+  content: "";
+  background-color: #000;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+@media (width < 769px) {
+  .serviceMedia__num::after {
+    right: -10px;
+    height: 30px;
+  }
+}
+
+.serviceMedia__title {
+  display: block;
+  margin-top: 16px;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.4642857143;
+}
+@media (width < 769px) {
+  .serviceMedia__title {
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 1.45;
+  }
+}
+
+.serviceMedia__text {
+  margin-top: 20px;
+  font-size: clamp(0.875rem, -0.839rem + 3.57vw, 1.375rem);
+  font-weight: 500;
+  line-height: 2.0909090909;
+}
+@media (width < 769px) {
+  .serviceMedia__text {
+    font-size: 14px;
+    line-height: 2.2857142857;
+  }
+}
+
+.serviceMedia__imgWrap {
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  width: 53.3333%;
+}
+@media (width < 769px) {
+  .serviceMedia__imgWrap {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+.serviceMedia__feature {
+  padding-inline: 50px;
+  padding-top: 30px;
+  padding-bottom: 120px;
+  background-color: #fff;
+}
+@media (width < 769px) {
+  .serviceMedia__feature {
+    padding-inline: 20px;
+    padding-bottom: 50px;
+  }
+}
+
+.serviceMedia__featureHeading {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-column-gap: 16px;
+     -moz-column-gap: 16px;
+          column-gap: 16px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (width < 769px) {
+  .serviceMedia__featureHeading {
+    -webkit-column-gap: 9px;
+       -moz-column-gap: 9px;
+            column-gap: 9px;
+  }
+}
+
+.serviceMedia__featureTitleMain {
+  font-family: "Oswald", "Roboto", "Noto Sans JP", sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+@media (width < 769px) {
+  .serviceMedia__featureTitleMain {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+}
+
+.serviceMedia__featureTitleSub {
+  font-size: 12px;
+  font-weight: 500;
+  color: #626262;
+}
+@media (width < 769px) {
+  .serviceMedia__featureTitleSub {
+    font-size: 10px;
+  }
+}
+
+.serviceMedia__featureText {
+  margin-top: 20px;
+  line-height: 2.375;
 }
 
 .u-spOnly {

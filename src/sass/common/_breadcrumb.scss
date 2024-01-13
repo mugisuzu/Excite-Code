@@ -8,11 +8,6 @@
   width: min(100%, 1340px);
   padding-inline: 10px;
   margin-inline: auto;
-  margin-top: 20px;
-
-  @include max(md) {
-    margin-top: 10px;
-  }
 }
 
 .breadcrumb {
