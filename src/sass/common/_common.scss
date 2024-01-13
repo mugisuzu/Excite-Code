@@ -372,6 +372,11 @@
 // ----------------------------------------*
 
 .page {
+    padding-top: 20px;
+
+  @include max(md) {
+    padding-top: 10px;
+  }
 }
 
 .page__inner {
@@ -416,4 +421,3 @@
     margin-top: 30px;
   }
 }
-
