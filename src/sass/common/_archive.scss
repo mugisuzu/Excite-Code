@@ -26,6 +26,15 @@
   }
 }
 
+.archive__categories--sticky {
+  position: sticky;
+  top: 20px;
+
+  @include max(md) {
+    position: static;
+  }
+}
+
 .archive__category {
   font-size: 14px;
   font-weight: $medium;

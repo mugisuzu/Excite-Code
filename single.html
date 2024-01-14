@@ -106,7 +106,7 @@
 
     <!-- pageMain -->
     <main class="pageMain">
-      <div class="pageWrap">
+      <div class="pageWrap pageWrap--single">
         <div class="breadcrumbWrap">
           <ol class="breadcrumb">
             <li class="breadcrumb__item">top</li>
@@ -120,7 +120,7 @@
             <div class="postWrap">
               <article class="post">
                 <header class="post__header">
-                  <div class="post__meta"><span class="Article__Tag NewsDetail__Tag Tag">トピックス</span><span class="PageNews__Tag NewsDetail__Tag Tag">イベント・キャンペーン</span></div>
+                  <div class="post__meta"><span class="tag">トピックス</span><span class="tag">イベント・キャンペーン</span></div>
                   <h1 class="post__title">2022年10月8日・9日・10日の3日間、試乗車フェアを開催します</h1>
                   <time class="post__time time" datetime="2022-09-22">2022.09.02</time>
                 </header>
@@ -149,38 +149,60 @@
               </article>
 
               <div class="single__button">
-                <a class="single__prev btn" href="#">前の記事へ</a>
-                <a class="single__next btn" href="#">次の記事へ</a>
+                <a class="single__prev btn prevArrow" href="#">前の記事へ</a>
+                <a class="single__next btn nextArrow" href="#">次の記事へ</a>
               </div>
             </div>
 
             <aside class="sidebar post__sidebar">
               <section class="sidebar__section newPost">
-                <h2 class="sideber__heading">最新記事</h2>
+                <h2 class="sidebar__heading">最新記事</h2>
                 <ul class="sidebar__list">
                   <li class="sidebar__item">
                     <div class="sidebar__imgWrap">
-                      <img src="" width="" height="" decoding="async" loading="lazy" alt="" />
+                      <img src="./public/assets/images/single/img.jpg" width="" height="" decoding="async" loading="lazy" alt="" />
                     </div>
                     <div class="sidebar__body">
                       <h3 class="sidebar__title">2022年10月8日・9日・10日の3日間、試乗車フェアを開催します</h3>
+                      <time class="sidebar__date time" datetime="">2022年9月</time>
+                    </div>
+                  </li>
+                  <li class="sidebar__item">
+                    <div class="sidebar__imgWrap">
+                      <img src="./public/assets/images/single/img.jpg" width="" height="" decoding="async" loading="lazy" alt="" />
+                    </div>
+                    <div class="sidebar__body">
+                      <h3 class="sidebar__title">お盆休みのご案内</h3>
+                      <time class="sidebar__date time" datetime="">2022年9月</time>
                     </div>
                   </li>
                 </ul>
               </section>
               <section class="sidebar__section postArchive">
-                <h2 class="sideber__heading">アーカイブ</h2>
+                <h2 class="sidebar__heading">アーカイブ</h2>
                 <ul class="sidebar__list">
                   <li class="sidebar__item">
-                    <time class="sidebar__date" datetime=""></time>
+                    <time class="sidebar__date" datetime="">2022年9月</time>
+                  </li>
+                  <li class="sidebar__item">
+                    <time class="sidebar__date" datetime="">2022年9月</time>
+                  </li>
+                  <li class="sidebar__item">
+                    <time class="sidebar__date" datetime="">2022年9月</time>
                   </li>
                 </ul>
               </section>
               <section class="sidebar__section postCategories">
-                <h2 class="sideber__heading">カテゴリー</h2>
+                <h2 class="sidebar__heading">カテゴリー</h2>
                 <ul class="sidebar__list">
                   <li class="sidebar__item">
-                    <span class="sidebar__category"></span>
+                    <span class="sidebar__category">トピックス</span>
+                  </li>
+                  <li class="sidebar__item">
+                    <span class="sidebar__category">トピックス</span>
+                  </li>
+                  <li class="sidebar__item">
+                    <span class="sidebar__category">トピックス</span>
                   </li>
                 </ul>
               </section>
