@@ -5,20 +5,26 @@
 // ----------------------------------------*/
 .single {
   display: grid;
-  grid-template-columns: 1fr 300px;
+  grid-template-columns: 1fr 321px;
   column-gap: 97px;
   width: min(1260px, 100%);
   padding-inline: 30px;
-  padding-bottom: 119px;
   margin-inline: auto;
 
   @include max(md) {
     grid-template-columns: 1fr;
+    padding-bottom: 80px;
   }
 }
 
 .postWrap {
-  padding-inline: 42.26px;
+  padding-inline: 21px 42.26px;
+  padding-bottom: 119px;
+
+  @include max(md) {
+    padding-inline: 0;
+    padding-bottom: 57px;
+  }
 }
 
 .post {
@@ -26,6 +32,12 @@
 
   @include max(md) {
     border-bottom: none;
+  }
+}
+
+.post__header {
+  @include max(md) {
+    padding-right: 21px;
   }
 }
 
@@ -52,8 +64,15 @@
 }
 
 .post__time {
+  margin-top: 20px;
   font-size: 11px;
   line-height: lh(11, 16);
+
+  @include max(md) {
+    margin-top: 10px;
+    font-size: 10px;
+    line-height: lh(10, 14);
+  }
 }
 
 .post__content {
@@ -64,6 +83,11 @@
   width: 100%;
   aspect-ratio: 718.474 / 380;
   object-fit: cover;
+
+  @include max(md) {
+      aspect-ratio: 315 / 176;
+    }
+
 }
 
 .post__body {
@@ -218,9 +242,17 @@
 // ----------------------------------------*
 
 .sidebar {
+  @include max(md) {
+    margin-inline: -15px;
+  }
 }
 
 .post__sidebar {
+  padding-right: 21px;
+
+  @include max(md) {
+    padding-right: 0;
+  }
 }
 
 .sidebar__section {
@@ -229,19 +261,12 @@
   }
 }
 
-.newPost {
-}
-
 .sidebar__heading {
   padding: 15px 18px;
   font-size: 14px;
   font-weight: $medium;
   color: $cWhite;
-  background-color: #001e63;
-}
-
-.sidebar__list {
-  // display: flex;
+  background-color: #001135;
 }
 
 .sidebar__item {
@@ -288,103 +313,3 @@
   font-size: 10px;
   line-height: lh(10, 14);
 }
-
-// * アーカイブ
-// ----------------------------------------*
-
-.postArchive {
-}
-
-.sidebar__date {
-}
-
-.postCategories {
-}
-
-.sidebar__category {
-}
-
-// // *----------------------------------------
-// // SingleSide
-// // ----------------------------------------*/
-
-// .SingleSide {
-//   @include max(md) {
-//     padding-inline: 5px;
-//   }
-// }
-
-// // * NewPost
-// // --------------------------*/
-
-// // .NewPost__List {
-// // }
-
-// .NewPost__Item {
-//   display: flex;
-//   column-gap: 18px;
-//   padding: 18px;
-//   border-bottom: 1px solid $cGraySideBorder;
-// }
-
-// .NewPost__Media {
-//   flex-shrink: 0;
-//   width: 100px;
-//   aspect-ratio: 1 / 1;
-// }
-
-// .NewPost__Body {
-//   display: flex;
-//   flex-direction: column;
-// }
-
-// .NewPost__Title {
-//   font-size: 12px;
-//   font-weight: $Regular;
-//   line-height: lh(12, 24);
-//   color: #040404;
-// }
-
-// .NewPost__Time {
-//   margin-top: auto;
-//   font-size: 10px;
-//   line-height: lh(10, 14);
-// }
-
-// // * SideArchive
-// // --------------------------*/
-
-// .SideArchive {
-//   margin-top: 40px;
-// }
-
-// .SideArchive__Item {
-//   padding: 18px;
-//   font-size: 14px;
-//   font-weight: $Regular;
-//   line-height: lh(14, 20);
-//   color: $cBlack;
-
-//   &:not(:last-child) {
-//     border-bottom: 1px solid $cGraySideBorder;
-//   }
-// }
-
-// // * Category
-// // --------------------------*/
-
-// .Category {
-//   margin-top: 40px;
-// }
-
-// .Category__Item {
-//   padding: 18px;
-//   font-size: 14px;
-//   font-weight: $Regular;
-//   line-height: lh(14, 20);
-//   color: $cBlack;
-
-//   &:not(:last-child) {
-//     border-bottom: 1px solid $cGraySideBorder;
-//   }
-// }
