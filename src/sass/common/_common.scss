@@ -371,15 +371,12 @@
 // * page
 // ----------------------------------------*
 
-.page {
-    padding-top: 20px;
+.pageWrap {
+  padding-top: 20px;
 
   @include max(md) {
     padding-top: 10px;
   }
-}
-
-.page__inner {
 }
 
 .pageContainer {

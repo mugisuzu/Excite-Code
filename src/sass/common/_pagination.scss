@@ -4,27 +4,31 @@
 // pagination
 // ----------------------------------------*/
 
-// .PaginationWrapper {
-//   margin-top: 56px;
+.paginationWrapper {
+  margin-top: 56px;
 
-//   @include max(md) {
-//     margin-top: 40px;
-//   }
-// }
+  @include max(md) {
+    margin-top: 40px;
+  }
+}
 
-// // ページネーションの要素を横並びにする
-// .pagination {
-//   display: flex;
-//   padding-left: 61px;
-//   overflow-x: auto;
+// ページネーションの要素を横並びにする
+.pagination {
+  display: flex;
+  padding-left: 61px;
+  overflow-x: auto;
 
-//   @include max(md) {
-//     justify-content: center;
-//     padding-left: 0;
-//   }
-// }
+  @include max(md) {
+    justify-content: center;
+    padding-left: 0;
+  }
+}
 
-// // それぞれのページ番号のスタイル
+.pagination__list {
+  display: flex;
+}
+
+// それぞれのページ番号のスタイル
 // .page-numbers {
 //   display: flex;
 //   gap: 10px;
@@ -43,7 +47,7 @@
 //     font-size: 14px;
 //     font-weight: $Medium;
 //     color: $cMineShaft;
-//     background-color: $cPaginationBg;
+//     background-color: $cpaginationBg;
 
 //     @include max(md) {
 //       font-size: 12px;
@@ -80,9 +84,9 @@
 //   // }
 // }
 
-// // 前へ、次へリンクのスタイル
-// .Pagination__Arrow {
-//   display: inline-block;
-//   width: 11px;
-//   height: 18px;
-// }
+// 前へ、次へリンクのスタイル
+.pagination__Arrow {
+  display: inline-block;
+  width: 11px;
+  height: 18px;
+}
