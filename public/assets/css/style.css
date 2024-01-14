@@ -1735,6 +1735,109 @@ a[href^="tel:"] {
   }
 }
 
+@media (width < 769px) {
+  .archiveWorks .archive__main {
+    margin-top: 38px;
+  }
+}
+
+.archiveWorks .archive__categories {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 20px;
+  padding-left: 20px;
+}
+@media (width < 769px) {
+  .archiveWorks .archive__categories {
+    grid-template-columns: 1fr 1fr;
+    padding-left: 34px;
+  }
+}
+
+.archiveWorks .archive__item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+}
+@media (width < 769px) {
+  .archiveWorks .archive__item {
+    -webkit-column-gap: 15px;
+       -moz-column-gap: 15px;
+            column-gap: 15px;
+    border-top: none;
+  }
+}
+
+.archiveWorks .archive__imgWrap {
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  width: 160px;
+}
+@media (width < 769px) {
+  .archiveWorks .archive__imgWrap {
+    width: 130px;
+  }
+}
+.archiveWorks .archive__imgWrap img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 160/160;
+}
+@media (width < 769px) {
+  .archiveWorks .archive__imgWrap img {
+    aspect-ratio: 130/100;
+  }
+}
+
+.archiveWorks .archive__body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.archiveWorks .archive__title {
+  margin-top: 30px;
+  font-size: 18px;
+  line-height: 1.7777777778;
+}
+@media (width < 769px) {
+  .archiveWorks .archive__title {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 2;
+  }
+}
+
+.archiveWorks .time {
+  margin-top: auto;
+  font-size: 10px;
+  line-height: 1.4;
+}
+@media (width < 769px) {
+  .archiveWorks .time {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    min-height: 24px;
+  }
+}
+
 .paginationWrapper {
   margin-top: 56px;
 }
@@ -2688,23 +2791,30 @@ a[href^="tel:"] {
 
 .single {
   display: grid;
-  grid-template-columns: 1fr 300px;
+  grid-template-columns: 1fr 321px;
   -webkit-column-gap: 97px;
      -moz-column-gap: 97px;
           column-gap: 97px;
   width: min(1260px, 100%);
   padding-inline: 30px;
-  padding-bottom: 119px;
   margin-inline: auto;
 }
 @media (width < 769px) {
   .single {
     grid-template-columns: 1fr;
+    padding-bottom: 80px;
   }
 }
 
 .postWrap {
-  padding-inline: 42.26px;
+  padding-inline: 21px 42.26px;
+  padding-bottom: 119px;
+}
+@media (width < 769px) {
+  .postWrap {
+    padding-inline: 0;
+    padding-bottom: 57px;
+  }
 }
 
 .post {
@@ -2713,6 +2823,12 @@ a[href^="tel:"] {
 @media (width < 769px) {
   .post {
     border-bottom: none;
+  }
+}
+
+@media (width < 769px) {
+  .post__header {
+    padding-right: 21px;
   }
 }
 
@@ -2744,8 +2860,16 @@ a[href^="tel:"] {
 }
 
 .post__time {
+  margin-top: 20px;
   font-size: 11px;
   line-height: 1.4545454545;
+}
+@media (width < 769px) {
+  .post__time {
+    margin-top: 10px;
+    font-size: 10px;
+    line-height: 1.4;
+  }
 }
 
 .post__content {
@@ -2757,6 +2881,11 @@ a[href^="tel:"] {
   aspect-ratio: 718.474/380;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media (width < 769px) {
+  .post__thumb {
+    aspect-ratio: 315/176;
+  }
 }
 
 .post__body {
@@ -2921,6 +3050,21 @@ a[href^="tel:"] {
   border-radius: 4px;
 }
 
+@media (width < 769px) {
+  .sidebar {
+    margin-inline: -15px;
+  }
+}
+
+.post__sidebar {
+  padding-right: 21px;
+}
+@media (width < 769px) {
+  .post__sidebar {
+    padding-right: 0;
+  }
+}
+
 .sidebar__section:not(:first-of-type) {
   margin-top: 40px;
 }
@@ -2930,7 +3074,7 @@ a[href^="tel:"] {
   font-size: 14px;
   font-weight: 500;
   color: #fff;
-  background-color: #001e63;
+  background-color: #001135;
 }
 
 .sidebar__item {
@@ -2986,6 +3130,21 @@ a[href^="tel:"] {
   margin-top: auto;
   font-size: 10px;
   line-height: 1.4;
+}
+
+.pageHeadingWorks {
+  background-image: url("../images/works/title_bg.jpg");
+}
+@media (width < 769px) {
+  .pageHeadingWorks {
+    background-image: url("../images/works/title_bg_sp.jpg");
+  }
+}
+
+@media (width < 769px) {
+  .pageWorks__inner {
+    padding-top: 0;
+  }
 }
 
 .u-spOnly {
