@@ -1,0 +1,26 @@
+@use '../base/init' as *;
+
+// *----------------------------------------
+// News
+// ----------------------------------------*/
+
+
+// * pageHeadingNews
+// ----------------------------------------*
+
+.pageHeadingNews {
+  background-image: url('../images/news/title_bg.jpg');
+
+  @include max(md) {
+    background-image: url('../images/news/title_bg_sp.jpg');
+  }
+}
+
+// * PageNews
+// ----------------------------------------*
+
+.pageNews__inner {
+  @include max(md) {
+    padding-top: 0;
+  }
+}
