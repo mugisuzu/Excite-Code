@@ -379,6 +379,14 @@
   }
 }
 
+.pageWrap--single {
+  padding-top: 200px;
+
+  @include max(md) {
+    padding-top: 100px;
+  }
+}
+
 .pageContainer {
   padding-top: 60px;
 

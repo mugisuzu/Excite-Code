@@ -38,11 +38,33 @@
     transform: scale(1, 1);
   }
 
+  }
+
+.prevArrow {
+  &::before {
+    width: 5px;
+    height: 9px;
+    content: '';
+    background-image: url('../images/icon/icon_arrow_prev.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.3s;
+    transform: translateX(0);
+  }
+
+  &:hover::before {
+    transform: translateX(-5px);
+  }
+
+}
+
+.nextArrow {
   &::after {
     width: 5px;
     height: 9px;
     content: '';
-    background-image: url('../images/icon/icon_more_arrow.svg');
+    background-image: url('../images/icon/icon_arrow_next.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
