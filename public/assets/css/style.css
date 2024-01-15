@@ -3132,6 +3132,231 @@ a[href^="tel:"] {
   line-height: 1.4;
 }
 
+.singleWorks {
+  width: min(900px, 100%);
+  padding-inline: 30px;
+  margin-inline: auto;
+}
+
+.singleWorks .post {
+  border-bottom: none;
+}
+
+@media (width < 769px) {
+  .singleWorks .post__header {
+    padding-right: 21px;
+  }
+}
+
+.singleWorks .post__title {
+  margin-top: 24px;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.4615384615;
+}
+@media (width < 769px) {
+  .singleWorks .post__title {
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 1.6666666667;
+  }
+}
+
+.singleWorks .post__thumb {
+  width: 100%;
+  aspect-ratio: 840/471;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (width < 769px) {
+  .singleWorks .post__thumb {
+    aspect-ratio: 315/176;
+  }
+}
+
+.singleWorks {
+  width: min(900px, 100%);
+  padding-inline: 30px;
+  margin-inline: auto;
+}
+
+.singleWorks .post {
+  border-bottom: none;
+}
+
+.singleWorks .post__header {
+  padding-right: 0;
+}
+
+.singleWorks .post__title {
+  margin-top: 24px;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.4615384615;
+}
+@media (width < 769px) {
+  .singleWorks .post__title {
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 1.6666666667;
+  }
+}
+
+.singleWorks .post__thumb {
+  width: 100%;
+  aspect-ratio: 840/471;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (width < 769px) {
+  .singleWorks .post__thumb {
+    aspect-ratio: 315/176;
+  }
+}
+
+.singleWorks .post__body {
+  padding: 40px 80px 60px;
+}
+@media (width < 769px) {
+  .singleWorks .post__body {
+    padding: 42px 0 40px;
+  }
+}
+.singleWorks .post__body h2 {
+  padding-block: 8px;
+  padding-inline: 10.57px;
+  margin-bottom: 40px;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.4545454545;
+  background-color: rgba(248, 249, 249, 0.8);
+  border-left: 3px solid #001e63;
+}
+@media (width < 769px) {
+  .singleWorks .post__body h2 {
+    padding: 8px 11px 9px;
+    font-size: 16px;
+    line-height: 1.4375;
+  }
+}
+.singleWorks .post__body h3 {
+  position: relative;
+  padding-bottom: 8px;
+  padding-left: 13.74px;
+  margin-bottom: 40px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.4444444444;
+  border-bottom: 1px solid #E4E4E4;
+}
+@media (width < 769px) {
+  .singleWorks .post__body h3 {
+    padding-left: 13px;
+  }
+}
+.singleWorks .post__body h3::before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 285.276px;
+  height: 1px;
+  content: "";
+  background-color: #001e63;
+}
+@media (width < 769px) {
+  .singleWorks .post__body h3::before {
+    width: 125px;
+  }
+}
+.singleWorks .post__body p {
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 2;
+}
+@media (width < 769px) {
+  .singleWorks .post__body p {
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 2.2857142857;
+  }
+}
+.singleWorks .post__body ul {
+  padding-left: 14.4px;
+  margin-bottom: 40px;
+  font-size: 16px;
+  line-height: 1.4375;
+  color: #242424;
+}
+@media (width < 769px) {
+  .singleWorks .post__body ul {
+    padding-left: 14px;
+    margin-bottom: 48px;
+    font-size: 14px;
+    line-height: 1.4285714286;
+  }
+}
+.singleWorks .post__body ul li {
+  position: relative;
+}
+.singleWorks .post__body ul li:not(:last-child) {
+  margin-bottom: 1px;
+}
+@media (width < 769px) {
+  .singleWorks .post__body ul li:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+.singleWorks .post__body ul li::before {
+  position: absolute;
+  top: 6px;
+  left: -14.4px;
+  width: 6px;
+  aspect-ratio: 1/1;
+  content: "";
+  background-color: #001e63;
+  border-radius: 50%;
+}
+@media (width < 769px) {
+  .singleWorks .post__body ul li::before {
+    top: 50%;
+    left: -14px;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+}
+.singleWorks .post__body img {
+  width: 100%;
+  aspect-ratio: 840/471;
+  margin-bottom: 40px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (width < 769px) {
+  .singleWorks .post__body img {
+    aspect-ratio: 315/176;
+  }
+}
+
+.singleWorks .single__button {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-right: 0;
+  padding-bottom: 119px;
+  margin-top: 0;
+}
+@media (width < 769px) {
+  .singleWorks .single__button {
+    padding-bottom: 79px;
+    padding-left: 20px;
+  }
+}
+
+.singleWorks .single__prev {
+  width: 285px;
+}
+
 .pageHeadingWorks {
   background-image: url("../images/works/title_bg.jpg");
 }
