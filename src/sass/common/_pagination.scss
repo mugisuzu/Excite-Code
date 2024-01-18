@@ -4,89 +4,90 @@
 // pagination
 // ----------------------------------------*/
 
+// * プラグイン　wp_pagenavi
+// ----------------------------------------*
+
 .paginationWrapper {
+  padding-left: 60px;
   margin-top: 56px;
 
   @include max(md) {
+    padding-left: 0;
     margin-top: 40px;
   }
 }
 
-// ページネーションの要素を横並びにする
-.pagination {
+.wp-pagenavi {
   display: flex;
-  padding-left: 61px;
-  overflow-x: auto;
+  column-gap: 10px;
+  align-items: center;
 
   @include max(md) {
     justify-content: center;
-    padding-left: 0;
   }
-}
 
-.pagination__list {
-  display: flex;
-}
+  // < >以外のa,span
+  .page,
+  .current {
+    display: inline-flex;
+    place-items: center;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    aspect-ratio: 1 / 1;
+    font-family: $secondFont;
+    font-size: 14px;
+    font-weight: $medium;
+    line-height: lh(14, 21);
+    background-color: #e9eeef;
+  }
 
-// それぞれのページ番号のスタイル
-// .page-numbers {
-//   display: flex;
-//   gap: 10px;
-//   align-items: center;
-//   margin-right: auto;
-//   margin-left: auto;
+  // 現在のページ番号
+  .current {
+    color: $cWhite;
+    pointer-events: none;
+    background-color: $cSecondary;
+  }
 
-//   a,
-//   span {
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     width: 40px;
-//     aspect-ratio: 1 / 1;
-//     font-family: $SecondFont;
-//     font-size: 14px;
-//     font-weight: $Medium;
-//     color: $cMineShaft;
-//     background-color: $cpaginationBg;
+  .previouspostslink,
+  .nextpostslink {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    width: 11px;
+    aspect-ratio: 11 / 18;
+    visibility: hidden;
 
-//     @include max(md) {
-//       font-size: 12px;
-//     }
-//   }
+    &::before,
+    &::after {
+      position: absolute;
+      top: calc(50% - 0px);
+      left: calc(50% - 0px);
+      width: 11px;
+      aspect-ratio: 11 / 18;
+      visibility: visible;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      transform: translate(-50%, -50%);
+    }
+  }
 
-//   // 現在のページ番号のCSS
-//   .current {
-//     color: $cWhite;
-//     pointer-events: none;
-//     background-color: $cSecondary;
-//   }
+  .previouspostslink {
+    margin-right: 13px;
 
-//   .dots {
-//     pointer-events: none;
-//   }
+    &::before {
+      content: '';
+      background-image: url('../images/icon/icon_nav_arrow_prev.svg');
+    }
+  }
 
-//   // 前へ
-//   .prev {
-//     justify-content: flex-end;
-//     padding-right: 10px;
-//     background-color: $cWhite;
-//   }
+  .nextpostslink {
+    margin-left: 13px;
 
-//   // 次へ
-//   .next {
-//     justify-content: flex-start;
-//     padding-left: 10px;
-//     background-color: $cWhite;
-//   }
-
-//   // a:focus,
-//   // a:hover {
-//   // }
-// }
-
-// 前へ、次へリンクのスタイル
-.pagination__Arrow {
-  display: inline-block;
-  width: 11px;
-  height: 18px;
+    &::before {
+      content: '';
+      background-image: url('../images/icon/icon_nav_arrow_next.svg');
+    }
+  }
 }

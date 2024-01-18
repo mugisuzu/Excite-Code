@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // }); // ここまで画面をスクロールをしたら動かしたい場合の記述
 
   // splide
-  if (document.getElementById('top')) {
+  if (document.querySelector('.home')) {
     new Splide('.firstView__splide', {
       type: 'loop',
       speed: 2500,
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }).mount();
   }
 
-  if (document.querySelector('#about')) {
+  if (document.querySelector('.page-id-11')) {
     new Splide('.company__splide', {
       type: 'loop', // ループさせる
       arrows: false, // 矢印ボタンを非表示
