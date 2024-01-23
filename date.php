@@ -5,7 +5,7 @@
     <div class="pageHeading__inner">
       <h1 class="heading heading--secondary">
         <span class="heading__main">news</span>
-        <span class="heading__sub">お知らせ</span>
+        <span class="heading__sub">お知らせ・月別一覧</span>
       </h1>
     </div>
   </div>
@@ -26,7 +26,7 @@
           <div class="archive">
             <div class="archive__side">
               <ul class="archive__categories archive__categories--sticky">
-                <li class="archive__category current-cat">すべてのお知らせ</li>
+                <li class="archive__category current">すべてのお知らせ</li>
                 <?php
                 $args = [
                   'title_li' => '',
@@ -40,10 +40,15 @@
 
             <?php
             $paged = get_query_var('paged') ? get_query_var('paged') : 1;
+            $year = get_query_var('year'); // 記事の年
+            $monthnum = get_query_var('monthnum'); // 記事の月
             $args = array(
+              'year' => $year,
+              'monthnum' => $monthnum,
               'post_type' => 'post',
               'posts_per_page' => 10,
               'paged' => $paged
+
             );
             $the_query = new WP_Query($args);
             ?>

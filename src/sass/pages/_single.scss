@@ -3,7 +3,7 @@
 // *----------------------------------------
 // Single
 // ----------------------------------------*/
-.single {
+.pageContainer .single {
   display: grid;
   grid-template-columns: 1fr 321px;
   column-gap: 97px;
@@ -20,6 +20,7 @@
 .postWrap {
   padding-inline: 21px 42.26px;
   padding-bottom: 119px;
+  overflow-x: hidden;
 
   @include max(md) {
     padding-inline: 0;
@@ -28,6 +29,7 @@
 }
 
 .post {
+  width: 100%;
   border-bottom: 1px solid $cGrayBorder;
 
   @include max(md) {
@@ -81,7 +83,7 @@
 
 .post__thumb {
   width: 100%;
-  aspect-ratio: 718.474 / 380;
+  aspect-ratio: 718 / 380;
   object-fit: cover;
 
   @include max(md) {
@@ -235,6 +237,10 @@
   border-radius: 4px;
 }
 
+.single__next {
+  margin-left: auto;
+}
+
 // * sidebar
 // ----------------------------------------*
 
@@ -246,9 +252,11 @@
 
 .post__sidebar {
   padding-right: 21px;
+  padding-bottom: 80px;
 
   @include max(md) {
     padding-right: 0;
+    padding-bottom: 0;
   }
 }
 
@@ -266,6 +274,7 @@
   background-color: #001135;
 }
 
+.sidebar__list li,
 .sidebar__item {
   padding: 18px;
   font-size: 14px;
@@ -293,6 +302,12 @@
   aspect-ratio: 1 / 1;
 }
 
+.sidebar__img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+
 .sidebar__body {
   display: flex;
   flex-direction: column;
@@ -309,6 +324,12 @@
   margin-top: auto;
   font-size: 10px;
   line-height: lh(10, 14);
+}
+
+// * カテゴリー
+// ----------------------------------------*
+
+.postCategories {
 }
 
 // * singleWorks

@@ -37,8 +37,7 @@
     background: $cSecondary;
     transform: scale(1, 1);
   }
-
-  }
+}
 
 .prevArrow {
   &::before {
@@ -56,7 +55,6 @@
   &:hover::before {
     transform: translateX(-5px);
   }
-
 }
 
 .nextArrow {

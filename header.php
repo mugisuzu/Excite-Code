@@ -41,7 +41,7 @@
       <div class="spMenu show" id="js-spMenu">
         <div class="spMenu__inner">
           <div class="spMenu__logo logo">
-            <a href="#"><img src="./public/assets/images/header/header_logo_sp_menu.svg" width="114" height="80" decoding="async" alt="Excite Code" /></a>
+            <a href="#"><img src="<?php echo esc_url(get_theme_file_uri('/public/assets/images/header/header_logo_sp_menu.svg')); ?>" width="114" height="80" decoding="async" alt="Excite Code" /></a>
           </div>
 
           <nav class="spMenu__nav">

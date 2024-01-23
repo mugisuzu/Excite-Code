@@ -16,23 +16,33 @@
   align-items: center;
   justify-content: flex-end;
   font-family: $thirdFont;
+
+  & .post {
+    border-bottom: none;
+  }
 }
 
 span[property='itemListElement'] {
   font-size: 15px;
-  line-height: lh(15,18);
+  line-height: lh(15, 18);
   color: $cSilverGray;
   text-transform: capitalize;
 
   @include max(md) {
     font-size: 10px;
-    line-height: lh(10,12);
-
+    line-height: lh(10, 12);
   }
 
   .current-item {
+    display: inline-block;
+    max-width: 11em;
+    padding: 0;
+    margin-top: -3px;
+    overflow: hidden;
     color: $cLightBlack;
-    border-bottom: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: middle;
   }
 }
 

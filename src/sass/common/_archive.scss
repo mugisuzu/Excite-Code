@@ -4,7 +4,8 @@
 // archive
 // ----------------------------------------*/
 
-.archive {
+.news .archive,
+.pageNews .archive {
   display: grid;
   grid-template-columns: 264px 1fr;
 
@@ -35,7 +36,8 @@
   }
 }
 
-.archive__category {
+.archive__category,
+.cat-item {
   font-size: 14px;
   font-weight: $medium;
   line-height: lh(14, 20);
@@ -46,7 +48,7 @@
     font-size: 12px;
   }
 
-  &.current {
+  &.current-cat {
     position: relative;
     color: $cBlack;
 
@@ -113,10 +115,10 @@
 
 .archive__meta {
   display: inline-flex;
-  column-gap: 29px;
+  column-gap: 20px;
 
   @include max(md) {
-    column-gap: 8px;
+    column-gap: 6px;
   }
 }
 
@@ -227,9 +229,8 @@
   line-height: lh(10, 14);
 
   @include max(md) {
-      display: flex;
-      align-items: flex-end;
-      min-height: 24px;
-    }
-
+    display: flex;
+    align-items: flex-end;
+    min-height: 24px;
+  }
 }

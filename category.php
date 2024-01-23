@@ -26,11 +26,10 @@
           <div class="archive">
             <div class="archive__side">
               <ul class="archive__categories archive__categories--sticky">
-                <li class="archive__category current-cat">すべてのお知らせ</li>
+                <li class="archive__category"><a href="<?php echo esc_url(home_url('/news')) ?>">すべてのお知らせ</a></li>
                 <?php
                 $args = [
                   'title_li' => '',
-                  // 'depth' => true,
                   'number' => 3,
                 ];
                 wp_list_categories($args);
@@ -40,10 +39,13 @@
 
             <?php
             $paged = get_query_var('paged') ? get_query_var('paged') : 1;
+            // 現在のカテゴリーを取得
+            $current_category = get_queried_object();
             $args = array(
               'post_type' => 'post',
               'posts_per_page' => 10,
-              'paged' => $paged
+              'paged' => $paged,
+              'cat' => $current_category->term_id,  // 現在のカテゴリーに絞り込む
             );
             $the_query = new WP_Query($args);
             ?>
