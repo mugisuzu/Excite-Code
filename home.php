@@ -30,7 +30,6 @@
                 <?php
                 $args = [
                   'title_li' => '',
-                  // 'depth' => true,
                   'number' => 3,
                 ];
                 wp_list_categories($args);
@@ -76,10 +75,7 @@
                         </a>
                       </div>
                     </li>
-                  <?php
-                  endwhile;
-                  wp_reset_postdata();
-                  ?>
+                  <?php endwhile; ?>
                 </ul>
               <?php else : ?>
                 <p>記事が投稿されていません</p>
@@ -91,7 +87,8 @@
                     <?php wp_pagenavi(array('query' => $the_query)); ?>
                   </div>
                 </div>
-              <?php endif; ?>
+              <?php endif;
+              wp_reset_postdata(); ?>
             </div>
           </div>
         </div>

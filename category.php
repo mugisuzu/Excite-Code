@@ -39,13 +39,12 @@
 
             <?php
             $paged = get_query_var('paged') ? get_query_var('paged') : 1;
-            // 現在のカテゴリーを取得
-            $current_category = get_queried_object();
+            $current_category = get_queried_object(); // 現在のカテゴリーを取得
             $args = array(
               'post_type' => 'post',
               'posts_per_page' => 10,
               'paged' => $paged,
-              'cat' => $current_category->term_id,  // 現在のカテゴリーに絞り込む
+              'cat' => $current_category->term_id, // 現在のカテゴリーを絞り込む
             );
             $the_query = new WP_Query($args);
             ?>
@@ -78,10 +77,7 @@
                         </a>
                       </div>
                     </li>
-                  <?php
-                  endwhile;
-                  wp_reset_postdata();
-                  ?>
+                  <?php endwhile; ?>
                 </ul>
               <?php else : ?>
                 <p>記事が投稿されていません</p>
@@ -93,7 +89,8 @@
                     <?php wp_pagenavi(array('query' => $the_query)); ?>
                   </div>
                 </div>
-              <?php endif; ?>
+              <?php endif;
+              wp_reset_postdata(); ?>
             </div>
           </div>
         </div>

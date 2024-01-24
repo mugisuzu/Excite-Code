@@ -26,11 +26,10 @@
           <div class="archive">
             <div class="archive__side">
               <ul class="archive__categories archive__categories--sticky">
-                <li class="archive__category current">すべてのお知らせ</li>
+                <li class="archive__category ">すべてのお知らせ</li>
                 <?php
                 $args = [
                   'title_li' => '',
-                  // 'depth' => true,
                   'number' => 3,
                 ];
                 wp_list_categories($args);
@@ -48,7 +47,6 @@
               'post_type' => 'post',
               'posts_per_page' => 10,
               'paged' => $paged
-
             );
             $the_query = new WP_Query($args);
             ?>
@@ -82,9 +80,7 @@
                       </div>
                     </li>
                   <?php
-                  endwhile;
-                  wp_reset_postdata();
-                  ?>
+                  endwhile; ?>
                 </ul>
               <?php else : ?>
                 <p>記事が投稿されていません</p>
@@ -96,7 +92,8 @@
                     <?php wp_pagenavi(array('query' => $the_query)); ?>
                   </div>
                 </div>
-              <?php endif; ?>
+              <?php endif;
+              wp_reset_postdata(); ?>
             </div>
           </div>
         </div>

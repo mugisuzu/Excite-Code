@@ -7,8 +7,8 @@
       'post_type' => 'post',
       'posts_per_page' => 5,
       'post__not_in' => [get_the_ID()], // 現在表示している記事を除外
-      "orderby" => "date",
-      "order" => "DESC",
+      'orderby' => 'date',
+      'order' => 'DESC',
     );
     $the_query = new WP_Query($args);
     ?>
