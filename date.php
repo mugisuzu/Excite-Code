@@ -26,7 +26,7 @@
           <div class="archive">
             <div class="archive__side">
               <ul class="archive__categories archive__categories--sticky">
-                <li class="archive__category ">すべてのお知らせ</li>
+                <li class="archive__category"><a href="<?php echo esc_url(home_url('/news')) ?>">すべてのお知らせ</a></li>
                 <?php
                 $args = [
                   'title_li' => '',

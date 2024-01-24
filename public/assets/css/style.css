@@ -1405,13 +1405,15 @@ span[property=itemListElement] .current-item {
 }
 
 .news .archive,
-.pageNews .archive {
+.pageNews .archive,
+.pageWorks .archive {
   display: grid;
   grid-template-columns: 264px 1fr;
 }
 @media (width < 769px) {
   .news .archive,
-  .pageNews .archive {
+  .pageNews .archive,
+  .pageWorks .archive {
     grid-template-columns: 1fr;
   }
 }
