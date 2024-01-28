@@ -16,7 +16,8 @@ body {
   color: $cBlack;
 }
 
-ul,ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -51,8 +52,6 @@ img {
 }
 
 // selectタグ矢印
-// select{
-// -webkit-appearance: none;
-// -moz-appearance: none;
-// appearance: none;
-// }
+select {
+  appearance: none;
+}

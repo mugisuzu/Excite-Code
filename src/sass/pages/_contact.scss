@@ -18,9 +18,6 @@
 // * Contact Form 7
 // ----------------------------------------*
 
-.contact {
-}
-
 .contact__inner {
   width: min(100%, 660px);
   padding-inline: 20px;
@@ -36,11 +33,11 @@
 }
 
 .formWrap {
-  padding-bottom: 120px;
+  padding-bottom: 96px;
   margin-top: 100px;
 
   @include max(md) {
-    padding-bottom: 80px;
+    padding-bottom: 56px;
     margin-top: 40px;
   }
 }
@@ -53,6 +50,7 @@
       margin-top: 30px;
     }
   }
+
   &:last-child {
     margin-top: 40px;
   }
@@ -90,24 +88,30 @@
   border-radius: 4px;
 }
 
-.form__input {
-}
-
 .form__input::placeholder {
   color: $cSilverGray;
 }
 
+.form__field--category .form__data {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    top: calc(50% - 0px);
+    right: 15px;
+    width: 12px;
+    aspect-ratio: 12 / 6;
+    content: '';
+    background-image: url('../images/icon/icon_drop_down.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transform: translate(-50%, -50%);
+  }
+}
+
 .form__field--message .form__data {
   height: 160px;
-}
-
-.form__textarea {
-}
-
-.form__acceptance {
-}
-
-.form__acceptanceText {
 }
 
 .form__btn {
@@ -134,6 +138,12 @@
   }
 }
 
+.form__btnContact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .form__input,
 .form__select,
 .form__textArea,
@@ -142,4 +152,200 @@
   height: 100%;
   font-size: 14px;
   line-height: lh(14, 20);
+}
+
+// 入力してくださいの部分
+.wpcf7-not-valid-tip {
+  position: absolute;
+  top: 45px;
+}
+
+// * Contact Form 7 confirm
+// ----------------------------------------*
+
+.confirm__inner {
+  width: min(100%, 720px);
+  padding-inline: 20px;
+  margin-inline: auto;
+}
+
+.confirm .container {
+  padding-bottom: 96px;
+  margin-top: 100px;
+
+  @include max(md) {
+    padding-bottom: 56px;
+    margin-top: 40px;
+  }
+}
+
+.confirm__item {
+  display: flex;
+  column-gap: 49px;
+  align-items: center;
+
+  @include max(md) {
+    flex-direction: column;
+    gap: 10px 0;
+    align-items: flex-start;
+  }
+
+  &:not(:first-of-type) {
+    margin-top: 40px;
+
+    @include max(md) {
+      margin-top: 30px;
+    }
+  }
+}
+
+.confirm__item--massage {
+  align-items: flex-start;
+}
+
+.confirm__key {
+  min-width: 143px;
+  font-size: 15px;
+  font-weight: $medium;
+
+  @include max(md) {
+    min-width: 0;
+  }
+}
+
+.confirm__required {
+  color: #e20000;
+}
+
+.confirm__value {
+  font-size: 14px;
+  line-height: lh(14, 20);
+}
+
+.confirm__item--massage .confirm__value {
+  line-height: lh(14, 32);
+}
+
+.confirm__buttons {
+  display: flex;
+  column-gap: 80px;
+  margin-top: 40px;
+
+  @include max(md) {
+    column-gap: 23px;
+    justify-content: center;
+  }
+}
+
+.confirm__backButton,
+.confirm__submit {
+  width: 100%;
+  font-weight: $medium;
+  border-radius: 3px;
+
+  @include max(md) {
+    max-width: 151px;
+    font-size: 14px;
+    line-height: lh(14, 20);
+  }
+}
+
+.confirm__backButton {
+  padding-block: 18px;
+  color: $cPrimary;
+  background-color: $cWhite;
+  border: 2px solid $cPrimary;
+
+  @include max(md) {
+    padding-block: 9px;
+  }
+}
+
+.confirm__submit {
+  padding-block: 20px;
+  color: $cWhite;
+  background-color: $cPrimary;
+
+  @include max(md) {
+    padding-block: 11px;
+  }
+}
+
+// * complete
+// ----------------------------------------*
+
+.complete__inner {
+  width: min(100%, 660px);
+  padding-inline: 20px;
+  padding-bottom: 120px;
+  margin-inline: auto;
+
+  @include max(md) {
+    padding-bottom: 80px;
+  }
+}
+
+.complete__message {
+  font-family: $secondFont;
+  font-size: 40px;
+  font-weight: $bold;
+  line-height: lh(40, 59);
+
+  @include max(md) {
+    font-size: 24px;
+    line-height: lh(24, 36);
+  }
+}
+
+.complete__messageJp {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: $medium;
+  line-height: lh(18, 26);
+
+  @include max(md) {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: $medium;
+    line-height: lh(14, 20);
+  }
+}
+
+.complete__text {
+  margin-top: 40px;
+  line-height: lh(16, 38);
+
+  @include max(md) {
+    margin-top: 30px;
+    font-size: 14px;
+    line-height: lh(14, 32);
+  }
+}
+
+.complete__button {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.complete__link {
+  column-gap: 10px;
+  justify-content: center;
+  width: 100%;
+  max-width: 460px;
+  padding-block: 20px;
+  font-size: 18px;
+  font-weight: $medium;
+  line-height: lh(18, 26);
+  color: $cWhite;
+  background-color: $cPrimary;
+  border-radius: 3px;
+
+  @include max(md) {
+    max-width: 275px;
+    padding-block: 11px;
+    font-size: 14px;
+    line-height: lh(14, 20);
+  }
 }

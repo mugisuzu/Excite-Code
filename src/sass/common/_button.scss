@@ -57,6 +57,12 @@
   }
 }
 
+.prevArrow--white {
+  &::before {
+    background-image: url('../images/icon/icon_arrow_prev_white.svg');
+  }
+}
+
 .nextArrow {
   &::after {
     width: 5px;

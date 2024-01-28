@@ -74,8 +74,8 @@
 
             <div class="container">
               <address class="access__body text">
-                <p class="access__post">〒000-0000</p>
-                <p class="access__address">〇〇県△△市□□区▲▲町0-0-0</p>
+                <p class="access__post"><?php the_field('about_post'); ?></p>
+                <p class="access__address"><?php the_field('about_address'); ?></p>
               </address>
 
               <div class="access__map">
@@ -101,7 +101,7 @@
                   </li>
                   <li class="companyOverview__item companyOverview__item--address">
                     <p class="companyOverview__heading">所在地</p>
-                    <p class="companyOverview__text"><span>〒000-0000</span><span>〇〇県△△市□□区▲▲町0-0-0</span></p>
+                    <p class="companyOverview__text"><span><?php the_field('about_post'); ?></span><span><?php the_field('about_address'); ?></span></p>
                   </li>
                   <li class="companyOverview__item">
                     <p class="companyOverview__heading">設立</p>
