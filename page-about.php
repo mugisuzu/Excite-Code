@@ -17,10 +17,11 @@
       <section class="pageAbout">
         <div class="page__message pageInner">
           <ul class="internalLink">
-            <li class="internalLink__item"><a href="#philosophy">経営理念</a></li>
-            <li class="internalLink__item"><a href="#access">アクセス</a></li>
-            <li class="internalLink__item"><a href="#company">会社概要</a></li>
+            <li class="internalLink__item"><a href="<?php echo esc_url(home_url('/about/#philosophy')) ?>">経営理念</a></li>
+            <li class="internalLink__item"><a href="<?php echo esc_url(home_url('/about/#access')) ?>">アクセス</a></li>
+            <li class="internalLink__item"><a href="<?php echo esc_url(home_url('/about/#company')) ?>">会社概要</a></li>
           </ul>
+
 
           <div class="page__messageBody">
             <h2 class="page__messageTitle">

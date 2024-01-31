@@ -17,9 +17,9 @@
       <section class="pageService">
         <div class="page__message pageInner">
           <ul class="internalLink">
-            <li class="internalLink__item"><a href="#">購入サポート</a></li>
-            <li class="internalLink__item"><a href="#">修理・整備</a></li>
-            <li class="internalLink__item"><a href="#">車検・点検</a></li>
+            <li class="internalLink__item"><a href="<?php echo esc_url(home_url('/service/#support')) ?>">購入サポート</a></li>
+            <li class="internalLink__item"><a href="<?php echo esc_url(home_url('/service/#repair')) ?>">修理・整備</a></li>
+            <li class="internalLink__item"><a href="<?php echo esc_url(home_url('/service/#inspection')) ?>">車検・点検</a></li>
           </ul>
 
           <div class="page__messageBody">
@@ -35,7 +35,7 @@
           <div class="serviceMedia__inner pageInner">
             <div class="container">
               <ul class="serviceMedia__list">
-                <li class="serviceMedia__item">
+                <li class="serviceMedia__item" id="support">
                   <div class="serviceMedia__bodyWrap">
                     <div class="serviceMedia__body">
                       <h2 class="serviceMedia__heading">
@@ -63,7 +63,7 @@
                     </p>
                   </div>
                 </li>
-                <li class="serviceMedia__item">
+                <li class="serviceMedia__item" id="repair">
                   <div class="serviceMedia__bodyWrap">
                     <div class="serviceMedia__body">
                       <h2 class="serviceMedia__heading">
@@ -91,7 +91,7 @@
                     </p>
                   </div>
                 </li>
-                <li class="serviceMedia__item">
+                <li class="serviceMedia__item" id="inspection">
                   <div class="serviceMedia__bodyWrap">
                     <div class="serviceMedia__body">
                       <h2 class="serviceMedia__heading">
