@@ -37,8 +37,7 @@
     background: $cSecondary;
     transform: scale(1, 1);
   }
-
-  }
+}
 
 .prevArrow {
   &::before {
@@ -56,7 +55,12 @@
   &:hover::before {
     transform: translateX(-5px);
   }
+}
 
+.prevArrow--white {
+  &::before {
+    background-image: url('../images/icon/icon_arrow_prev_white.svg');
+  }
 }
 
 .nextArrow {

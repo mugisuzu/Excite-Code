@@ -13,32 +13,42 @@
 .breadcrumb {
   display: flex;
   gap: 10px;
+  align-items: center;
   justify-content: flex-end;
   font-family: $thirdFont;
+
+  & .post {
+    border-bottom: none;
+  }
 }
 
-.breadcrumb__item {
-  display: flex;
-  gap: 10px;
-  align-items: center;
+span[property='itemListElement'] {
   font-size: 15px;
-  font-weight: $regular;
+  line-height: lh(15, 18);
   color: $cSilverGray;
   text-transform: capitalize;
 
   @include max(md) {
     font-size: 10px;
+    line-height: lh(10, 12);
   }
 
-  &:last-child {
-    color: $cGray;
-  }
-
-  &:not(:first-child)::before {
+  .current-item {
     display: inline-block;
-    width: 20px;
-    height: 1px;
-    content: '';
-    background-color: $cGray;
+    max-width: 11em;
+    padding: 0;
+    margin-top: -3px;
+    overflow: hidden;
+    color: $cLightBlack;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: middle;
   }
+}
+
+.breadcrumb__between {
+  display: inline-block;
+  width: 20px;
+  height: 1px;
+  background-color: $cSilverGray;
 }

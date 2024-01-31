@@ -43,15 +43,22 @@
 
 .header__nav .gnav__list {
   gap: 50px;
-  margin-right: 50px;
+
+  &:last-of-type {
+    margin-right: 50px;
+  }
 }
 
 .header__nav .gnav__btn {
-  padding: 30px 41px 31px;
+  height: 100%;
   background-color: $cPrimary;
 }
 
 .header__nav .gnav__btnLink {
   column-gap: 10px;
+  width: 187px;
+  height: inherit;
+  padding: 20px 41px;
+  line-height: lh(16, 19);
   color: $cWhite;
 }
