@@ -19,6 +19,10 @@
 
 .singleWorks .post__header {
   padding-right: 0;
+
+  @include max(md) {
+    padding-right: 21px;
+  }
 }
 
 .singleWorks .post__title {

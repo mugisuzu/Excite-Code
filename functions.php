@@ -12,9 +12,9 @@ function my_script_init()
   wp_enqueue_style('Roboto', '//fonts.googleapis.com/css2?family=Roboto:wght@400;500&&display=swap');
   wp_enqueue_style('font_awesome', '//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
   if (is_front_page() || is_page('about')) {
-    wp_enqueue_style('splide_css', '//cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css');
-    wp_enqueue_script('splide_js', '//cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js', "", "1.0.1", true);
-    wp_enqueue_script('splide_extensions', '//cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.4.2/dist/js/splide-extension-auto-scroll.min.js', "", "1.0.1", true);
+    wp_enqueue_style('splide_css', '//cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css');
+    wp_enqueue_script('splide_js', '//cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js', "", "1.0.1", true);
+    wp_enqueue_script('splide_extensions', '//cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js', "", "1.0.1", true);
     wp_enqueue_script('slider_js', get_template_directory_uri() . '/public/assets/js/splide.js', array('jquery'), '1.0.1', true);
   }
   wp_enqueue_script('main_js', get_template_directory_uri() . '/public/assets/js/script.js', array('jquery'), '1.0.1', true);

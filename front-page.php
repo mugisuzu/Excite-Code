@@ -63,7 +63,7 @@
                 弊社は、輸入車選びのすべてを見つめ直し、新たなスタイルを提案するインポート・セレクト・ブランドです。これまでの憧れだけや批評家の意見といったイメージで選ぶのではなく、オーナー様となる方がクルマから直接感じるリアルな感性を第一にした、最良の一台との出会いをコーディネートいたします。
               </p>
               <div class="media__btn">
-                <a href="#" class="more btn nextArrow">read more</a>
+                <a href="<?php echo esc_url(home_url('/about')); ?>" class="more btn nextArrow">read more</a>
               </div>
             </div>
           </div>
@@ -75,10 +75,10 @@
 
   <section class="service">
     <div class="service__inner inner">
-      <h2 class="heading heading--primary">service</h2>
+      <h2 class="heading heading--primary fadeRightTrigger">service</h2>
 
       <div class="container">
-        <ul class="service__cards cards">
+        <ul class="service__cards cards fadeLeftTrigger">
           <li class="card">
             <div class="card__imgWrap">
               <picture>
@@ -89,7 +89,7 @@
             <div class="card__body">
               <p class="card__text text">国を超え、メーカーを超え、高級の本質をお届けする特別な一台との出会いをサポートします。</p>
               <div class="card__btn">
-                <a href="#" class="more btn nextArrow">read more</a>
+                <a href="<?php echo esc_url(home_url('/service')); ?>" class="more btn nextArrow">read more</a>
               </div>
             </div>
           </li>
@@ -103,7 +103,7 @@
             <div class="card__body">
               <p class="card__text text">高度な輸入車修理技術と数多くの修理実績、熟練の技術・設備であなたの愛車を完全に直します。</p>
               <div class="card__btn">
-                <a href="#" class="more btn nextArrow">read more</a>
+                <a href="<?php echo esc_url(home_url('/service')); ?>" class="more btn nextArrow">read more</a>
               </div>
             </div>
           </li>
@@ -117,7 +117,7 @@
             <div class="card__body">
               <p class="card__text text">輸入車の取り扱いが県内トップクラス。専門の整備工場へ任せたいなら弊社へご相談ください。</p>
               <div class="card__btn">
-                <a href="#" class="more btn nextArrow">read more</a>
+                <a href="<?php echo esc_url(home_url('/service')); ?>" class="more btn nextArrow">read more</a>
               </div>
             </div>
           </li>
@@ -129,64 +129,57 @@
 
   <section class="works">
     <div class="works__inner inner">
-      <h2 class="heading heading--primary">works</h2>
+      <h2 class="heading heading--primary fadeLeftTrigger">works</h2>
 
       <div class="container">
-        <ul class="worksMedia">
-          <li class="worksMedia__item">
-            <div class="worksMedia__imgWrap">
-              <img class="worksMedia__img" src="./public/assets/images/top/Works/img01.jpg" width="580" height="458" decoding="async" loading="lazy" alt="worksサムネイル" />
-            </div>
-            <div class="worksMedia__body">
-              <div class="worksMedia__tag">
-                <span class="tag">修理・整備</span>
-              </div>
-              <a href="#" class="worksMedia__link">
-                <h3 class="worksMedia__title hoverLine">車のドアが開けられなくなった｜ドアロックの交換と...</h3>
-              </a>
-              <p class="worksMedia__text text">
-                弊社は、輸入車選びのすべてを見つめ直し、新たなスタイルを提案するインポート・セレクト・ブランドです。これまでの憧れだけや批評家の意見といったイメージで選ぶのではなく...
-              </p>
-              <time class="time" datetime="2022-09-02">2022.09.02</time>
-            </div>
-          </li>
-          <li class="worksMedia__item">
-            <div class="worksMedia__imgWrap">
-              <img class="worksMedia__img" src="./public/assets/images/top/Works/img01.jpg" width="580" height="458" decoding="async" loading="lazy" alt="worksサムネイル" />
-            </div>
-            <div class="worksMedia__body">
-              <div class="worksMedia__tag">
-                <span class="tag">修理・整備</span>
-              </div>
-              <a href="#" class="worksMedia__link">
-                <h3 class="worksMedia__title hoverLine">車のドアが開けられなくなった｜ドアロックの交換と...</h3>
-              </a>
-              <p class="worksMedia__text text">
-                弊社は、輸入車選びのすべてを見つめ直し、新たなスタイルを提案するインポート・セレクト・ブランドです。これまでの憧れだけや批評家の意見といったイメージで選ぶのではなく...
-              </p>
-              <time class="time" datetime="2022-09-02">2022.09.02</time>
-            </div>
-          </li>
-          <li class="worksMedia__item">
-            <div class="worksMedia__imgWrap">
-              <img class="worksMedia__img" src="./public/assets/images/top/Works/img01.jpg" width="580" height="458" decoding="async" loading="lazy" alt="worksサムネイル" />
-            </div>
-            <div class="worksMedia__body">
-              <div class="worksMedia__tag">
-                <span class="tag">修理・整備</span>
-              </div>
-              <a href="#" class="worksMedia__link">
-                <h3 class="worksMedia__title hoverLine">車のドアが開けられなくなった｜ドアロックの交換と...</h3>
-              </a>
-              <p class="worksMedia__text text">
-                弊社は、輸入車選びのすべてを見つめ直し、新たなスタイルを提案するインポート・セレクト・ブランドです。これまでの憧れだけや批評家の意見といったイメージで選ぶのではなく...
-              </p>
-              <time class="time" datetime="2022-09-02">2022.09.02</time>
-            </div>
-          </li>
-        </ul>
+        <?php
+        $args = array(
+          'post_type' => 'works',
+          'posts_per_page' => 3,
+        );
+        $the_query = new WP_Query($args);
+        ?>
+        <?php if ($the_query->have_posts()) : ?>
+          <ul class="worksMedia">
+            <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+              <li class="worksMedia__item fadeDownTrigger">
+                <div class="worksMedia__imgWrap">
+                  <?php display_thumbnail('worksMedia__img'); ?>
+                </div>
+                <div class="worksMedia__body">
+                  <div class="worksMedia__tag">
+                    <?php
+                    $taxonomy_terms = get_the_terms($post->ID, 'genre');
+                    if ($taxonomy_terms) {
+                      $limit = 1; // 表示するカテゴリーの数を指定
+                      $count = 0;
+                      foreach ($taxonomy_terms as $taxonomy_term) {
+                        if ($count < $limit) {
+                          echo '<span class="tag"><a href="' . esc_url(get_term_link($taxonomy_term->term_id)) . '">' . esc_html($taxonomy_term->name) . '</a></span>';
+                          $count++;
+                        } else {
+                          break; // 制限に達したらループを抜ける
+                        }
+                      }
+                    }
+                    ?>
+                  </div>
+                  <a href="<?php the_permalink(); ?>" class="worksMedia__link">
+                    <h3 class="worksMedia__title hoverLine"><?php echo get_flexible_title(24); ?></h3>
+                  </a>
+                  <p class="worksMedia__text text">
+                    <?php echo get_flexible_content(85); ?>
+                  </p>
+                  <time class="time" datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y.m.d'); ?></time>
+                </div>
+              </li>
+            <?php endwhile; ?>
+          </ul>
+        <?php else : ?>
+          <p>記事が投稿されていません</p>
+        <?php endif; ?>
         <div class="works__btn">
-          <a href="#" class="more btn nextArrow">read more</a>
+          <a href="<?php echo esc_url(home_url('/works')); ?>" class="more btn nextArrow">read more</a>
         </div>
       </div>
     </div>
@@ -195,42 +188,67 @@
 
   <section class="news">
     <div class="news__inner inner">
-      <h2 class="heading heading--primary">news</h2>
 
       <div class="container">
         <div class="archive">
           <div class="archive__side">
-            <div class="archive__categories">
-              <div class="archive__category current">すべてのお知らせ</div>
-              <div class="archive__category">トピックス</div>
-              <div class="archive__category">イベント・キャンペーン</div>
-              <div class="archive__category">入庫車情報</div>
-            </div>
+            <h2 class="heading heading--primary fadeLeftTrigger">news</h2>
+            <ul class="archive__categories fadeUpTrigger">
+              <li class="archive__category current-cat"><a href="<?php echo esc_url(home_url('/news')) ?>">すべてのお知らせ</a></li>
+              <?php
+              $args = [
+                'title_li' => '',
+                'number' => 3,
+              ];
+              wp_list_categories($args);
+              ?>
+            </ul>
           </div>
 
           <div class="archive__main">
-            <ul class="archive__list">
-              <li class="archive__item">
-                <div class="archive__body">
-                  <time class="time" datetime="2022-09-22">2022.09.02</time>
-                  <div class="archive__meta"><span class="tag">トピックス</span><span class="tag">イベント・キャンペーン</span></div>
-                  <a class="archive__link" href="#">
-                    <h3 class="archive__title hoverLine">2022年10月8日・9日・10日の3日間、試乗車フェアを開催します</h3>
-                  </a>
-                </div>
-              </li>
-              <li class="archive__item">
-                <div class="archive__body">
-                  <time class="time" datetime="2022-09-22">2022.09.02</time>
-                  <div class="archive__meta"><span class="tag">トピックス</span><span class="tag">イベント・キャンペーン</span></div>
-                  <a class="archive__link" href="#">
-                    <h3 class="archive__title hoverLine">2022年10月8日・9日・10日の3日間、試乗車フェアを開催します</h3>
-                  </a>
-                </div>
-              </li>
-            </ul>
+            <?php
+            $args = array(
+              'post_type' => 'post',
+              'posts_per_page' => 5,
+            );
+            $the_query = new WP_Query($args);
+            ?>
+            <?php if ($the_query->have_posts()) : ?>
+              <ul class="archive__list">
+                <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                  <li class="archive__item fadeDownTrigger">
+                    <div class="archive__body">
+                      <time class="time" datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y.m.d'); ?></time>
+                      <div class="archive__meta">
+                        <?php
+                        $categories = get_the_category();
+                        if ($categories) {
+                          $limit = 2; // 表示するカテゴリーの数を指定
+                          $count = 0;
+                          foreach ($categories as $category) {
+                            if ($count < $limit) {
+                              echo '<span class="tag">' . get_the_cat_link_name() . '</span>';
+                              $count++;
+                            } else {
+                              break; // 制限に達したらループを抜ける
+                            }
+                          }
+                        }
+                        ?>
+                      </div>
+                      <a class="archive__link" href="<?php the_permalink(); ?>">
+                        <h3 class="archive__title hoverLine"><?php echo get_flexible_title(35); ?></h3>
+                      </a>
+                    </div>
+                  </li>
+                <?php endwhile; ?>
+              </ul>
+            <?php else : ?>
+              <p>記事が投稿されていません</p>
+            <?php endif; ?>
+
             <div class="archive__btn">
-              <a href="#" class="more btn nextArrow">read more</a>
+              <a href="<?php echo esc_url(home_url('/news')); ?>" class="more btn nextArrow">read more</a>
             </div>
           </div>
         </div>
@@ -239,25 +257,7 @@
   </section>
 </main>
 <!-- /.main -->
-<div class="info">
-  <div class="container">
-    <div class="info__imgWrap">
-      <picture>
-        <source media="(max-width: 768px)" srcset="<?php echo esc_url(get_theme_file_uri('/public/assets/images/footer/img_sp.jpg')); ?>" />
-        <img class="info__img" src="<?php echo esc_url(get_theme_file_uri('/public/assets/images/footer/img.jpg')); ?>" width="1640" height="892" decoding="async" loading="lazy" alt="" />
-      </picture>
-    </div>
 
-    <div class="info__body">
-      <div class="info__bodyInner">
-        <p class="info__text">輸入車の購入や修理のご相談など<br />お気軽にお問い合わせください。</p>
-        <div class="info__btn">
-          <a class="btn bgLeft info__mail" href="#"><span><i class="fa-regular fa-envelope"></i><span class="info__btnText">お問い合わせ</span></span></a>
-          <a class="btn bgLeft info__tel" href="#"><span><i class="fa-solid fa-phone"></i><span class="info__btnText">0000-000-000</span></span></a>
-        </div>
-        <p class="info__text">受付時間 : 火曜日を除く 10：00〜18：00</p>
-      </div>
-    </div>
-  </div>
-</div>
+<?php get_template_part('template-parts/section', 'info'); ?>
+
 <?php get_footer(); ?>

@@ -26,7 +26,7 @@
           <p class="confirm__text text">入力内容をご確認ください。</p>
 
           <div class="container">
-            <?php do_shortcode('[contact-form-7 id="d6ad0e9" title="お問い合わせ確認"]'); ?>
+            <?php echo do_shortcode('[contact-form-7 id="d6ad0e9" title="お問い合わせ確認"]'); ?>
           </div>
         </div>
       </div>

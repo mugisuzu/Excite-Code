@@ -24,12 +24,12 @@
 
           <div class="footer__nav">
             <ul class="footer__list">
-              <li class="footer__navItem"><a class="footer__navLink" href="#">top</a></li>
-              <li class="footer__navItem"><a class="footer__navLink" href="#">about</a></li>
-              <li class="footer__navItem"><a class="footer__navLink" href="#">service</a></li>
-              <li class="footer__navItem"><a class="footer__navLink" href="#">works</a></li>
-              <li class="footer__navItem"><a class="footer__navLink" href="#">news</a></li>
-              <li class="footer__navItem"><a class="footer__navLink" href="#">contact</a></li>
+              <li class="footer__navItem"><a class="footer__navLink" href="<?php echo esc_url(home_url('/')); ?>">top</a></li>
+              <li class="footer__navItem"><a class="footer__navLink" href="<?php echo esc_url(home_url('/about')); ?>">about</a></li>
+              <li class="footer__navItem"><a class="footer__navLink" href="<?php echo esc_url(home_url('/service')); ?>">service</a></li>
+              <li class="footer__navItem"><a class="footer__navLink" href="<?php echo esc_url(home_url('/works')); ?>">works</a></li>
+              <li class="footer__navItem"><a class="footer__navLink" href="<?php echo esc_url(home_url('/news')); ?>">news</a></li>
+              <li class="footer__navItem"><a class="footer__navLink" href="<?php echo esc_url(home_url('/contact')); ?>">contact</a></li>
               <li class="footer__navItem"><a class="footer__navLink" href="#">プライバシーポリシー</a></li>
             </ul>
           </div>

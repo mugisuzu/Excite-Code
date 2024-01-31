@@ -2,15 +2,9 @@
 
 <!-- main -->
 <main class="pageMain">
-  <div class="pageHeading pageHeadingContact">
-    <div class="pageHeading__inner">
-      <h1 class="heading heading--secondary">
-        <span class="heading__main">contact</span>
-        <span class="heading__sub">お問い合わせ</span>
-      </h1>
-    </div>
-  </div>
 
+  <?php get_template_part('template-parts/page', 'heading'); ?>
+  
   <div class="pageWrap">
     <?php if (function_exists('bcn_display')) { ?>
       <div class="breadcrumbWrap">
@@ -26,7 +20,7 @@
           <p class="contact__text text">弊社へのお問い合わせは<br />下記フォームより受け付けております。<br />担当者が確認後、折り返しご連絡させていただきます。</p>
 
           <div class="formWrap">
-            <?php echo do_shortcode('[contact-form-7 id="5dce02e" title="お問い合わせ"]');?>
+            <?php echo do_shortcode('[contact-form-7 id="5dce02e" title="お問い合わせ"]'); ?>
           </div>
         </div>
       </div>

@@ -68,9 +68,6 @@
   }
 }
 
-.pageTitle {
-}
-
 .pageTitle__main {
   display: flex;
   column-gap: 20px;
@@ -189,11 +186,12 @@
 }
 
 .pageHeading__inner {
-  width: clamp(11.875rem, 0.099rem + 50.24vw, 31.25rem);
+  width: max(34.7222vw, 500px);
   padding: 16px 50px 47px;
   background-color: $cWhite;
 
   @include max(md) {
+    width: 50.6667vw;
     padding: 18px 18px 36px;
   }
 }
@@ -203,6 +201,7 @@
 
 .logo img {
   width: 258px;
+  opacity: 1;
 
   @include max(lg) {
     width: 114px;
@@ -219,20 +218,6 @@
 
   @include max(lg) {
     visibility: hidden;
-  }
-
-  .gnav__list {
-    
-  }
-
-  &-item {
-
-  }
-}
-
-.menu {
-  &-itme {
-
   }
 }
 

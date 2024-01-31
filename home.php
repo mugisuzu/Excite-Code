@@ -1,14 +1,8 @@
 <?php get_header(); ?>
 <!-- pageMain -->
 <main class="pageMain">
-  <div class="pageHeading pageHeadingNews">
-    <div class="pageHeading__inner">
-      <h1 class="heading heading--secondary">
-        <span class="heading__main">news</span>
-        <span class="heading__sub">お知らせ</span>
-      </h1>
-    </div>
-  </div>
+
+  <?php get_template_part('template-parts/page', 'heading'); ?>
 
   <div class="pageWrap">
     <?php if (function_exists('bcn_display')) { ?>
@@ -24,7 +18,7 @@
       <section class="pageNews">
         <div class="pageNews__inner pageInner">
           <div class="archive">
-            <div class="archive__side">
+            <div class="archive__side fadeUpTrigger">
               <ul class="archive__categories archive__categories--sticky">
                 <li class="archive__category current-cat"><a href="<?php echo esc_url(home_url('/news')) ?>">すべてのお知らせ</a></li>
                 <?php
@@ -50,7 +44,7 @@
               <?php if ($the_query->have_posts()) : ?>
                 <ul class="archive__list">
                   <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-                    <li class="archive__item">
+                    <li class="archive__item fadeDownTrigger">
                       <div class="archive__body">
                         <time class="time" datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y.m.d'); ?></time>
                         <div class="archive__meta archive__meta--gray">

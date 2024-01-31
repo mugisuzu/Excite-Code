@@ -1,0 +1,112 @@
+@use '../base/init' as *;
+
+// *----------------------------------------
+// 404
+// ----------------------------------------*/
+
+// * error
+// ----------------------------------------*
+.error {
+  width: calc(100% - 170px);
+  aspect-ratio: 1270 / 600;
+  margin-top: 330px;
+  margin-bottom: 120px;
+  margin-left: auto;
+  background-image: url('../images/error/title_bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include max(md) {
+    aspect-ratio: 365 / 280;
+    margin-bottom: 0;
+    background-image: url('../images/error/title_bg_sp.jpg');
+  }
+
+  @include max(lg) {
+    margin-top: 110px;
+  }
+
+  @include max(xl) {
+    width: calc(100% - 10px);
+  }
+}
+
+.error__inner {
+  width: min(100%, 934px);
+  min-height: 100%;
+  padding-top: 168px;
+  margin-inline: auto;
+
+  @include max(md) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0;
+  }
+}
+
+.error__body {
+  width: 509px;
+  margin-left: auto;
+}
+
+.error__heading {
+  font-family: $secondFont;
+  font-size: 70px;
+  font-weight: $bold;
+  line-height: lh(70, 104);
+  color: $cWhite;
+
+  @include max(md) {
+    font-size: 35px;
+    line-height: lh(35, 52);
+    text-align: center;
+  }
+}
+
+.error__text {
+  font-size: 16px;
+  line-height: lh(16, 38);
+  color: $cWhite;
+
+  @include max(md) {
+    margin-top: 40px;
+    font-size: 14px;
+    line-height: lh(14, 32);
+    color: $cBlack;
+  }
+}
+
+.error__button {
+  @include max(md) {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 80px;
+  }
+}
+
+.error__link {
+  gap: 10px;
+  justify-content: center;
+  width: 100%;
+  max-width: 145px;
+  padding-block: 11px;
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: lh(14, 20);
+  color: $cWhite;
+  background-color: transparent;
+  border: 1px solid $cWhite;
+  border-radius: 4px;
+
+  @include max(md) {
+    color: $cPrimary;
+    border: 1px solid $cPrimary;
+  }
+}
+
+.errorBody {
+  width: 100%;
+  padding-inline: 20px;
+}

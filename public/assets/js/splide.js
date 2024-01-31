@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
   // splide
-  if (document.querySelector('.home')) {
+  if (document.querySelector('.firstView__splide')) {
     new Splide('.firstView__splide', {
       type: 'loop',
       speed: 2500,
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }).mount();
   }
 
-  if (document.querySelector('.page-id-11')) {
+  if (document.querySelector('.company__splide')) {
     new Splide('.company__splide', {
       type: 'loop', // ループさせる
       arrows: false, // 矢印ボタンを非表示
